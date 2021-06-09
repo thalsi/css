@@ -1,0 +1,17 @@
+p {
+  background-color: bisque;
+  text-align: center;
+}
+
+#margin {
+  margin: 50px;
+}
+
+#marginCollapes {
+  margin: 0 0 0 60px;
+}
+
+#padding {
+  background-color: beige;
+  padding: 0 0 0 180px;
+}
