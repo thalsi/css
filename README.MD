@@ -24,3 +24,12 @@
 3. Pseudo-class selector
 4. Pseudo-elements selector
 5. Attribute selector
+
+### 4.Css box modal
+
+-All html element can be considered as box.
+
+- Margin
+- Border
+- Padding
+- Content
