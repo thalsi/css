@@ -33,3 +33,37 @@
 - Border
 - Padding
 - Content
+
+### 5.Layout Proparty
+
+1. Display-Proparty
+
+- Layout controlling Show /hide
+
+* display:none
+* display:block
+* visibility:hidden
+
+2. max-width-Proparty
+
+- handling samll window
+- samll devies
+
+2. Position-Proparty
+
+- the type of positioning method used for an element.
+
+* static
+* relative
+* fixed
+* absolute
+* sticky
+
+3. Overflow-Proparty
+
+- clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
+
+* visible
+* hidden
+* scroll
+* auto
