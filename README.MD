@@ -49,7 +49,7 @@
 - handling samll window
 - samll devies
 
-2. Position-Proparty
+3. Position-Proparty
 
 - the type of positioning method used for an element.
 
@@ -59,7 +59,7 @@
 * absolute
 * sticky
 
-3. Overflow-Proparty
+4. Overflow-Proparty
 
 - clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
 
@@ -67,3 +67,16 @@
 * hidden
 * scroll
 * auto
+
+5. Float and clear
+
+### 6.Media Queries
+
+- Using media queries are a popular technique for delivering a tailored style sheet to desktops, laptops, tablets, and mobile phones
+
+### 7.CSS Flexbox Layout Module
+
+-makes it easier to design flexible responsive layout structure without using float or positioning.
+
+- contanir
+- item
