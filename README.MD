@@ -17,10 +17,10 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 📦 Core Fundamentals (Enhanced)
+## 📦 Core Fundamentals 
 
-- [ ] What is CSS, syntax, rules
-- [ ] CSS types: Inline, Internal, External
+- [x] What is CSS, syntax, rules
+- [x] CSS types: Inline, Internal, External
 - [ ] Advanced Selectors: `:is()`, `:where()`, `:has()`, `:focus-visible`
 - [ ] Pseudo-Elements: `::marker`, `::selection`, `::backdrop`
 - [ ] Specificity, Inheritance & Cascade
@@ -33,7 +33,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 📐 Layout Systems (Expanded)
+## 📐 Layout Systems 
 
 - [ ] `display`: `block`, `inline`, `inline-block`, `none`, `flow-root`
 - [ ] Flexbox:
@@ -51,7 +51,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 🎨 Styling & Visual Effects (Augmented)
+## 🎨 Styling & Visual Effects 
 
 - [ ] Typography:
   - `font-family`, `font-weight`, `line-height`, `font-variation-settings`
@@ -70,7 +70,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 📱 Responsive & Adaptive Design (Complete)
+## 📱 Responsive & Adaptive Design 
 
 - [ ] Viewport meta tag: `width=device-width`, `initial-scale=1`
 - [ ] Media Queries:
@@ -87,7 +87,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 🌀 Animations & Transforms (Polished)
+## 🌀 Animations & Transforms 
 
 - [ ] Transitions:
   - `transition`, `transition-timing-function`, `transition-behavior`
@@ -101,7 +101,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 🧠 Advanced Features (Cutting-Edge)
+## 🧠 Advanced Features 
 
 - [ ] Native CSS Nesting (2024+)
 - [ ] CSS Scope (`@scope` rule)
@@ -114,7 +114,7 @@ A highly detailed CSS checklist covering everything from fundamentals to the mos
 
 ---
 
-## 🛠️ Tooling & Architecture (Professional)
+## 🛠️ Tooling & Architecture 
 
 - [ ] BEM Naming Convention (Block__Element--Modifier)
 - [ ] Utility-First CSS (Tailwind concepts)
