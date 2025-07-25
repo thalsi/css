@@ -4,7 +4,8 @@
   "description": "A highly detailed CSS checklist covering everything from fundamentals to the most modern features in 2025+ CSS development.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,20 @@
   "bugs": {
     "url": "https://github.com/thalsi/css/issues"
   },
-  "homepage": "https://github.com/thalsi/css#readme"
+  "homepage": "https://github.com/thalsi/css#readme",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/cli": "^19.8.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2"
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --wirte"
+    ],
+    "*.{html,css,json,md}": [
+      "prettier --write"
+    ]
+  }
 }
