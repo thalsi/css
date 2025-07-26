@@ -3,11 +3,11 @@
 ---
 
 ### 📦 Module 1: CSS Fundamentals
-- [ ] What is CSS?
-- [ ] CSS Syntax & Rules
-- [ ] CSS Types: Inline, Internal, External
-- [ ] CSS Comments
-- [ ] CSS File Structure & Linking
+- [x] What is CSS?
+- [x] CSS Syntax & Rules
+- [x] CSS Types: Inline, Internal, External
+- [x] CSS Comments
+- [x] CSS File Structure & Linking
 
 ---
 

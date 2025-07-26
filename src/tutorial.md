@@ -67,3 +67,46 @@ CSS Rule Types
 | **Inline CSS**   | Inside an HTML element           | `<p style="color: red;">Text</p>` |
 | **Internal CSS** | Inside `<style>` tag in `<head>` | See below                         |
 | **External CSS** | In a separate `.css` file        | See below                         |
+
+## 3. CSS Comments
+
+| Purpose                    | Example                             |
+| -------------------------- | ----------------------------------- |
+| Explain complex code       | `/* Centering the content */`       |
+| Section headings           | `/* === HEADER SECTION === */`      |
+| Temporarily disable a rule | `/* color: red; */`                 |
+| Notes for other developers | `/* TODO: Add responsive styles */` |
+
+---
+
+### 4. CSS File Structure
+
+```
+/css
+│
+├── base/         # Reset, typography, general styles
+│   └── _reset.css
+│   └── _typography.css
+│
+├── components/   # Buttons, cards, modals, etc.
+│   └── _button.css
+│   └── _modal.css
+│
+├── layout/       # Header, footer, grid, sidebar
+│   └── _header.css
+│   └── _footer.css
+│
+├── pages/        # Page-specific styles
+│   └── _home.css
+│   └── _about.css
+│
+├── themes/       # Light/dark themes, color schemes
+│   └── _dark.css
+│
+├── utils/        # Mixins, helpers, variables
+│   └── _variables.css
+│   └── _helpers.css
+│
+└── main.css      # Master file importing everything
+
+```
