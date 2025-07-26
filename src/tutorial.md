@@ -110,3 +110,126 @@ CSS Rule Types
 └── main.css      # Master file importing everything
 
 ```
+
+---
+
+# 🎯 Module 2: Selectors (Basic to Advanced)
+
+## 1. Basic Selectors
+
+| Selector Type      | Syntax          | Example           | Selects...                                      |
+| ------------------ | --------------- | ----------------- | ----------------------------------------------- |
+| **Universal**      | `*`             | `* {}`            | All elements on the page                        |
+| **Type (Element)** | `element`       | `p {}`            | All `<p>` elements                              |
+| **Class**          | `.classname`    | `.btn {}`         | All elements with `class="btn"`                 |
+| **ID**             | `#idname`       | `#header {}`      | The element with `id="header"`                  |
+| **Group**          | `selector, ...` | `h1, .box, #main` | All matching `h1`, class `.box`, and ID `#main` |
+| **Descendant**     | `A B`           | `div p {}`        | All `<p>` inside `<div>`                        |
+
+---
+
+## 2. Grouping & Combinators
+
+### 2.1 Grouping Selector
+
+| Selector      | Description                  | Example                     |
+| ------------- | ---------------------------- | --------------------------- |
+| `h1, p, .box` | Styles all matching elements | `h1`, all `<p>`, and `.box` |
+
+---
+
+### 2.2 Combinators
+
+| Combinator     | Syntax  | Description                                     | Example   | Matches...                                 |
+| -------------- | ------- | ----------------------------------------------- | --------- | ------------------------------------------ |
+| **Descendant** | `A B`   | Selects `B` **inside** `A` (any level deep)     | `div p`   | All `<p>` inside any `<div>`               |
+| **Child**      | `A > B` | Selects `B` that is a **direct child** of `A`   | `ul > li` | `<li>` directly inside `<ul>`              |
+| **Adjacent**   | `A + B` | Selects `B` that is the **next sibling** of `A` | `h2 + p`  | `<p>` that comes **right after** an `<h2>` |
+| **General**    | `A ~ B` | Selects **all siblings** `B` after `A`          | `h2 ~ p`  | All `<p>` siblings after an `<h2>`         |
+
+---
+
+### 2.3 Attribute Selectors
+
+| Selector          | Meaning             | Example             |
+| ----------------- | ------------------- | ------------------- |
+| `[attr]`          | Has that attribute  | `[disabled]`        |
+| `[attr="value"]`  | Exact match         | `[type="checkbox"]` |
+| `[attr^="value"]` | Starts with         | `[href^="https"]`   |
+| `[attr$="value"]` | Ends with           | `[src$=".jpg"]`     |
+| `[attr*="value"]` | Contains (anywhere) | `[title*="sale"]`   |
+
+---
+
+### 2.4 Advanced Selectors
+
+### 1. Attribute Selectors
+
+| Selector          | Meaning            | Example                        |          |                        |
+| ----------------- | ------------------ | ------------------------------ | -------- | ---------------------- |
+| `[attr]`          | Has attribute      | `input[required]`              |          |                        |
+| `[attr="value"]`  | Exact value        | `a[target="_blank"]`           |          |                        |
+| `[attr~="value"]` | Contains word      | `[title~="sale"]`              |          |                        |
+| \`\[attr          | ="value"]\`        | Exact or value followed by `-` | \`\[lang | ="en"]`→`en`, `en-US\` |
+| `[attr^="value"]` | Starts with        | `a[href^="https"]`             |          |                        |
+| `[attr$="value"]` | Ends with          | `img[src$=".jpg"]`             |          |                        |
+| `[attr*="value"]` | Contains substring | `div[class*="header"]`         |          |                        |
+
+---
+
+### 2. Combinators
+
+| Selector | Meaning                      | Example   |
+| -------- | ---------------------------- | --------- |
+| `A B`    | Descendant                   | `div p`   |
+| `A > B`  | Direct child                 | `ul > li` |
+| `A + B`  | Adjacent sibling (next only) | `h2 + p`  |
+| `A ~ B`  | General sibling (any after)  | `h2 ~ p`  |
+
+---
+
+### 3. Grouping
+
+| Selector      | Description                  | Example                     |
+| ------------- | ---------------------------- | --------------------------- |
+| `h1, p, .box` | Styles all matching elements | `h1`, all `<p>`, and `.box` |
+
+---
+
+### 4. Pseudo-Classes
+
+| Selector                    | Meaning                     |
+| --------------------------- | --------------------------- |
+| `:hover`                    | Mouse over                  |
+| `:active`                   | While clicking              |
+| `:focus`                    | Focused (e.g., input field) |
+| `:checked`                  | Checked checkbox/radio      |
+| `:disabled`                 | Disabled form field         |
+| `:enabled`                  | Enabled form field          |
+| `:required`                 | Required field              |
+| `:optional`                 | Optional field              |
+| `:valid`, `:invalid`        | Form validation states      |
+| `:read-only`, `:read-write` | Input read-only/write       |
+
+---
+
+### 5. Structural Selectors
+
+| Selector             | Example                                                    |
+| -------------------- | ---------------------------------------------------------- |
+| `:first-child`       | `li:first-child { font-weight: bold; }`                    |
+| `:last-child`        | `li:last-child { color: red; }`                            |
+| `:nth-child(3)`      | `li:nth-child(3) { background: yellow; }`                  |
+| `:nth-last-child(2)` | `li:nth-last-child(2) { color: purple; }`                  |
+| `:only-child`        | `div:only-child { margin: 2rem; }`                         |
+| `:first-of-type`     | `p:first-of-type { font-size: 20px; }`                     |
+| `:last-of-type`      | `p:last-of-type { font-style: italic; }`                   |
+| `:nth-of-type(2)`    | `p:nth-of-type(2) { color: green; }`                       |
+| `:only-of-type`      | `h2:only-of-type { border: 2px solid blue; }`              |
+| `:empty`             | `div:empty { height: 30px; background: lightgray; }`       |
+| `:not(selector)`     | `div:not(.active) { opacity: 0.5; }`                       |
+| `:is(h1, h2, h3)`    | `:is(h1, h2, h3) { margin: 0; }`                           |
+| `:where(h1, h2, h3)` | `:where(h1, h2, h3) { font-weight: normal; }`              |
+| `:has(img)`          | `div:has(img) { padding: 1rem; }` (🧪 modern support only) |
+
+--

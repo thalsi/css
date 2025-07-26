@@ -12,9 +12,9 @@
 ---
 
 ### 🎯 Module 2: Selectors (Basic to Advanced)
-- [ ] Basic Selectors: `*`, `element`, `.class`, `#id`
-- [ ] Grouping & Combinators: `div p`, `div > p`, `div + p`, `div ~ p`
-- [ ] Attribute Selectors: `[type="text"]`, `[href^="https"]`
+- [x] Basic Selectors: `*`, `element`, `.class`, `#id`
+- [x] Grouping & Combinators: `div p`, `div > p`, `div + p`, `div ~ p`
+- [x] Attribute Selectors: `[type="text"]`, `[href^="https"]`
 - [ ] Advanced Selectors:
   - `:is()`, `:where()`, `:has()`
   - `:focus-visible`, `:not()`
