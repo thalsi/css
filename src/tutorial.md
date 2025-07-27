@@ -117,119 +117,106 @@ CSS Rule Types
 
 ## 1. Basic Selectors
 
-| Selector Type      | Syntax          | Example           | Selects...                                      |
-| ------------------ | --------------- | ----------------- | ----------------------------------------------- |
-| **Universal**      | `*`             | `* {}`            | All elements on the page                        |
-| **Type (Element)** | `element`       | `p {}`            | All `<p>` elements                              |
-| **Class**          | `.classname`    | `.btn {}`         | All elements with `class="btn"`                 |
-| **ID**             | `#idname`       | `#header {}`      | The element with `id="header"`                  |
-| **Group**          | `selector, ...` | `h1, .box, #main` | All matching `h1`, class `.box`, and ID `#main` |
-| **Descendant**     | `A B`           | `div p {}`        | All `<p>` inside `<div>`                        |
+| **Selector** | **Description**                              | **Example**                       | **Usage**                                                               |
+| ------------ | -------------------------------------------- | --------------------------------- | ----------------------------------------------------------------------- |
+| `*`          | Universal – selects **all elements**         | `* { box-sizing: border-box; }`   | Used for global resets or applying base rules to every element          |
+| `element`    | Type selector – selects by **tag name**      | `div { margin: 1rem; }`           | Used to style all elements of a specific type like all `p`, `ul`, etc.  |
+| `.class`     | Selects elements by **class**                | `.highlight { color: red; }`      | Apply common styles to multiple elements sharing the same class         |
+| `#id`        | Selects a **single unique** element by ID    | `#main { padding: 20px; }`        | Target one specific element, like a main container                      |
+| `A B`        | **Descendant** – selects B inside A          | `div p { color: gray; }`          | Style elements deeply nested inside containers                          |
+| `A > B`      | **Direct child** – only B directly inside A  | `ul > li { list-style: square; }` | Useful when children need different styles than nested descendants      |
+| `A + B`      | **Adjacent sibling** – B right after A       | `h1 + p { font-style: italic; }`  | Style paragraphs immediately following a heading                        |
+| `A ~ B`      | **General sibling** – all B siblings after A | `h2 ~ p { color: red; }`          | Target all later siblings of same parent, like a group of related notes |
 
 ---
 
-## 2. Grouping & Combinators
+## 2. Attribute Selectors
 
-### 2.1 Grouping Selector
-
-| Selector      | Description                  | Example                     |
-| ------------- | ---------------------------- | --------------------------- |
-| `h1, p, .box` | Styles all matching elements | `h1`, all `<p>`, and `.box` |
-
----
-
-### 2.2 Combinators
-
-| Combinator     | Syntax  | Description                                     | Example   | Matches...                                 |
-| -------------- | ------- | ----------------------------------------------- | --------- | ------------------------------------------ |
-| **Descendant** | `A B`   | Selects `B` **inside** `A` (any level deep)     | `div p`   | All `<p>` inside any `<div>`               |
-| **Child**      | `A > B` | Selects `B` that is a **direct child** of `A`   | `ul > li` | `<li>` directly inside `<ul>`              |
-| **Adjacent**   | `A + B` | Selects `B` that is the **next sibling** of `A` | `h2 + p`  | `<p>` that comes **right after** an `<h2>` |
-| **General**    | `A ~ B` | Selects **all siblings** `B` after `A`          | `h2 ~ p`  | All `<p>` siblings after an `<h2>`         |
+| **Selector**     | **Description**                                      | **Example**                                  | **Usage**                                               |                                  |                                           |
+| ---------------- | ---------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------- | -------------------------------- | ----------------------------------------- |
+| `[attr]`         | Element with the attribute, any value                | `input[required] { border: red; }`           | Highlight required fields                               |                                  |                                           |
+| `[attr="value"]` | Attribute must match exactly                         | `input[type="text"] { color: blue; }`        | Style specific input types                              |                                  |                                           |
+| `[attr^="val"]`  | Attribute starts with value                          | `a[href^="https"] { color: green; }`         | Target secure links                                     |                                  |                                           |
+| `[attr$="val"]`  | Attribute ends with value                            | `img[src$=".jpg"] { border-radius: 8px; }`   | Style images with certain file types                    |                                  |                                           |
+| `[attr*="val"]`  | Attribute contains substring                         | `div[class*="error"] { background: pink; }`  | Style all error messages, regardless of full class name |                                  |                                           |
+| `[attr~="val"]`  | Attribute is a space-separated list containing value | `[title~="sale"] { font-weight: bold; }`     | Highlight products tagged with specific words           |                                  |                                           |
+| \`\[attr         | ="val"]\`                                            | Attribute equals `val` or starts with `val-` | \`\[lang                                                | ="en"] { font-style: italic; }\` | Style content based on language or locale |
 
 ---
 
-### 2.3 Attribute Selectors
+## 3. Structural Pseudo-classes
 
-| Selector          | Meaning             | Example             |
-| ----------------- | ------------------- | ------------------- |
-| `[attr]`          | Has that attribute  | `[disabled]`        |
-| `[attr="value"]`  | Exact match         | `[type="checkbox"]` |
-| `[attr^="value"]` | Starts with         | `[href^="https"]`   |
-| `[attr$="value"]` | Ends with           | `[src$=".jpg"]`     |
-| `[attr*="value"]` | Contains (anywhere) | `[title*="sale"]`   |
-
----
-
-### 2.4 Advanced Selectors
-
-### 1. Attribute Selectors
-
-| Selector          | Meaning            | Example                        |          |                        |
-| ----------------- | ------------------ | ------------------------------ | -------- | ---------------------- |
-| `[attr]`          | Has attribute      | `input[required]`              |          |                        |
-| `[attr="value"]`  | Exact value        | `a[target="_blank"]`           |          |                        |
-| `[attr~="value"]` | Contains word      | `[title~="sale"]`              |          |                        |
-| \`\[attr          | ="value"]\`        | Exact or value followed by `-` | \`\[lang | ="en"]`→`en`, `en-US\` |
-| `[attr^="value"]` | Starts with        | `a[href^="https"]`             |          |                        |
-| `[attr$="value"]` | Ends with          | `img[src$=".jpg"]`             |          |                        |
-| `[attr*="value"]` | Contains substring | `div[class*="header"]`         |          |                        |
+| **Selector**           | **Description**                          | **Example**                                    | **Usage**                                                      |
+| ---------------------- | ---------------------------------------- | ---------------------------------------------- | -------------------------------------------------------------- |
+| `:first-child`         | First child of its parent                | `li:first-child { font-weight: bold; }`        | Style the first item in a list                                 |
+| `:last-child`          | Last child of its parent                 | `li:last-child { color: red; }`                | Style the last item in a navigation or group                   |
+| `:nth-child(n)`        | Select nth child (1-based index)         | `li:nth-child(2) { color: green; }`            | Zebra-striping rows or selecting specific children             |
+| `:nth-last-child(n)`   | Select nth child from end                | `li:nth-last-child(1) { font-style: italic; }` | Useful when you don’t know total count but want last few items |
+| `:only-child`          | Matches if it’s the only child           | `p:only-child { border: 1px solid blue; }`     | Style unique items that appear alone                           |
+| `:first-of-type`       | First of specific tag among siblings     | `p:first-of-type { color: purple; }`           | When the first heading or paragraph needs emphasis             |
+| `:last-of-type`        | Last of specific tag among siblings      | `p:last-of-type { font-size: 1.2em; }`         | Style last instance of repeated tag like `li` or `p`           |
+| `:nth-of-type(n)`      | Nth of a specific tag                    | `div:nth-of-type(2) { background: #eee; }`     | For layout structures or column grids                          |
+| `:nth-last-of-type(n)` | Nth of type from the end                 | `div:nth-last-of-type(1) { color: brown; }`    | Target last few items of same type                             |
+| `:only-of-type`        | Only one of that tag type among siblings | `span:only-of-type { color: orange; }`         | Prevent duplicate styles when there's only one tag present     |
+| `:empty`               | No children or content                   | `div:empty { display: none; }`                 | Hide empty wrappers or placeholders                            |
 
 ---
 
-### 2. Combinators
+## 4. UI State Pseudo-classes
 
-| Selector | Meaning                      | Example   |
-| -------- | ---------------------------- | --------- |
-| `A B`    | Descendant                   | `div p`   |
-| `A > B`  | Direct child                 | `ul > li` |
-| `A + B`  | Adjacent sibling (next only) | `h2 + p`  |
-| `A ~ B`  | General sibling (any after)  | `h2 ~ p`  |
-
----
-
-### 3. Grouping
-
-| Selector      | Description                  | Example                     |
-| ------------- | ---------------------------- | --------------------------- |
-| `h1, p, .box` | Styles all matching elements | `h1`, all `<p>`, and `.box` |
-
----
-
-### 4. Pseudo-Classes
-
-| Selector                    | Meaning                     |
-| --------------------------- | --------------------------- |
-| `:hover`                    | Mouse over                  |
-| `:active`                   | While clicking              |
-| `:focus`                    | Focused (e.g., input field) |
-| `:checked`                  | Checked checkbox/radio      |
-| `:disabled`                 | Disabled form field         |
-| `:enabled`                  | Enabled form field          |
-| `:required`                 | Required field              |
-| `:optional`                 | Optional field              |
-| `:valid`, `:invalid`        | Form validation states      |
-| `:read-only`, `:read-write` | Input read-only/write       |
+| **Selector**     | **Description**                        | **Example**                                          | **Usage**                                        |
+| ---------------- | -------------------------------------- | ---------------------------------------------------- | ------------------------------------------------ |
+| `:hover`         | When mouse hovers                      | `a:hover { color: red; }`                            | Create hover effects on links or buttons         |
+| `:focus`         | Element is focused                     | `input:focus { outline: 2px solid blue; }`           | Improve keyboard accessibility and styling       |
+| `:focus-within`  | Parent element with focused child      | `form:focus-within { border: 2px solid green; }`     | Highlight entire forms when any input is focused |
+| `:focus-visible` | Focused by keyboard (not mouse)        | `button:focus-visible { border: 2px dashed blue; }`  | Reduce focus outlines to only keyboard users     |
+| `:active`        | When element is being clicked          | `button:active { background: orange; }`              | Add button press effect                          |
+| `:checked`       | Input is checked                       | `input:checked + label { font-weight: bold; }`       | Style selected checkboxes/radio buttons          |
+| `:enabled`       | Input is enabled (not disabled)        | `input:enabled { background: white; }`               | Style only working input fields                  |
+| `:disabled`      | Input is disabled                      | `input:disabled { background: #eee; }`               | Show disabled inputs as inactive                 |
+| `:required`      | Field is required                      | `input:required { border-left: 4px solid red; }`     | Visually indicate mandatory fields               |
+| `:optional`      | Field is not required                  | `input:optional { border-left: 4px solid green; }`   | Differentiate optional fields                    |
+| `:read-only`     | Cannot be edited                       | `input:read-only { background: #f8f8f8; }`           | Indicate locked input fields                     |
+| `:read-write`    | Can be edited                          | `textarea:read-write { background: white; }`         | Highlight editable areas                         |
+| `:indeterminate` | Checkbox neither checked nor unchecked | `input:indeterminate { outline: 2px dotted black; }` | For partial selection states (JS-based)          |
+| `:default`       | Default form control                   | `button:default { font-weight: bold; }`              | Highlight primary submit buttons                 |
 
 ---
 
-### 5. Structural Selectors
+## 5. Logic Selectors
 
-| Selector             | Example                                                    |
-| -------------------- | ---------------------------------------------------------- |
-| `:first-child`       | `li:first-child { font-weight: bold; }`                    |
-| `:last-child`        | `li:last-child { color: red; }`                            |
-| `:nth-child(3)`      | `li:nth-child(3) { background: yellow; }`                  |
-| `:nth-last-child(2)` | `li:nth-last-child(2) { color: purple; }`                  |
-| `:only-child`        | `div:only-child { margin: 2rem; }`                         |
-| `:first-of-type`     | `p:first-of-type { font-size: 20px; }`                     |
-| `:last-of-type`      | `p:last-of-type { font-style: italic; }`                   |
-| `:nth-of-type(2)`    | `p:nth-of-type(2) { color: green; }`                       |
-| `:only-of-type`      | `h2:only-of-type { border: 2px solid blue; }`              |
-| `:empty`             | `div:empty { height: 30px; background: lightgray; }`       |
-| `:not(selector)`     | `div:not(.active) { opacity: 0.5; }`                       |
-| `:is(h1, h2, h3)`    | `:is(h1, h2, h3) { margin: 0; }`                           |
-| `:where(h1, h2, h3)` | `:where(h1, h2, h3) { font-weight: normal; }`              |
-| `:has(img)`          | `div:has(img) { padding: 1rem; }` (🧪 modern support only) |
+| **Selector**         | **Description**                               | **Example**                                   | **Usage**                                                     |
+| -------------------- | --------------------------------------------- | --------------------------------------------- | ------------------------------------------------------------- |
+| `:not(sel)`          | Select elements **not** matching selector     | `li:not(.active) { color: gray; }`            | Exclude items from style rules                                |
+| `:is(sel1, sel2)`    | Matches any of listed selectors (specificity) | `:is(h1, h2) { margin: 0; }`                  | Cleaner group targeting with full specificity                 |
+| `:where(sel1, sel2)` | Like `:is`, but no specificity                | `:where(section, article) { padding: 1rem; }` | Use in resets or design systems to avoid conflicts            |
+| `:has(sel)`          | Select parent with matching child (modern)    | `div:has(img) { border: 1px solid red; }`     | Conditional styling when children exist (Chrome support only) |
 
---
+---
+
+## 6. Pseudo-elements
+
+| **Selector**     | **Description**                 | **Example**                                         | **Usage**                                              |
+| ---------------- | ------------------------------- | --------------------------------------------------- | ------------------------------------------------------ |
+| `::before`       | Insert content before element   | `p::before { content: "→ "; }`                      | Add icons, symbols, or annotations before real content |
+| `::after`        | Insert content after element    | `p::after { content: " ✓"; }`                       | Add status indicators after text                       |
+| `::first-line`   | Style first line of text        | `p::first-line { font-weight: bold; }`              | Create typographic effects in paragraphs               |
+| `::first-letter` | Style first letter              | `p::first-letter { font-size: 150%; }`              | Create drop caps or stylized headlines                 |
+| `::selection`    | Style user-selected text        | `::selection { background: yellow; }`               | Customize highlight color                              |
+| `::placeholder`  | Style input placeholder text    | `input::placeholder { color: gray; }`               | Improve placeholder visibility                         |
+| `::marker`       | Style bullets or list numbers   | `li::marker { color: red; font-size: 1.5em; }`      | Custom bullets for lists                               |
+| `::backdrop`     | Fullscreen background in modals | `::backdrop { background-color: rgba(0,0,0,0.8); }` | Style behind dialogs or fullscreen popups              |
+| `::cue`          | Style subtitles for media       | `::cue { color: white; }`                           | Apply themes to video captions                         |
+
+---
+
+## 7. Other Special Selectors
+
+| **Selector**              | **Description**                                       | **Example**                          | **Usage**                                           |
+| ------------------------- | ----------------------------------------------------- | ------------------------------------ | --------------------------------------------------- |
+| `:lang(lang-code)`        | Match elements by language                            | `p:lang(en) { font-style: italic; }` | Apply styles based on language locale               |
+| `:dir(ltr)` / `:dir(rtl)` | Match text direction (left-to-right or right-to-left) | `:dir(rtl) { text-align: right; }`   | RTL language support                                |
+| `:root`                   | Targets root element (`<html>`)                       | `:root { --main-color: #333; }`      | Define CSS custom properties (variables) globally   |
+| `:scope`                  | Current context in query selector or shadow DOM       | `:scope > h2 { font-weight: bold; }` | Used in scripts or scoped styling within components |
+
+---

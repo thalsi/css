@@ -1,3 +1,8 @@
-div:has(img) {
-  border: 2px solid green;
+:root {
+  --main-color: #007bff;
+  --font-size: 16px;
+}
+
+body {
+  color: var(--main-color);
 }

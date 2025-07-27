@@ -23,12 +23,24 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="box1">
-      <img src="photo.jpg" alt="Photo" />
-    </div>
+    <p class="highlight">Try selecting this text with your mouse.</p>
 
-    <div class="box2">
-      <p>No image here</p>
-    </div>
+    <input type="text" placeholder="Enter your name" />
+
+    <ul>
+      <li>item</li>
+      <li>item</li>
+      <li>item</li>
+    </ul>
+
+    <dialog id="modal">
+      <p>modal</p>
+      <button onclick="modal.close()">Close</button>
+    </dialog>
+
+    <button onclick="modal.showModal()">Open</button>
+
+    <p dir="ltr">Left to Right (English)</p>
+    <p dir="rtl">ימין לשמאל (Hebrew)</p>
   </body>
 </html>
