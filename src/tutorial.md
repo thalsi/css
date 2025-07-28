@@ -220,3 +220,67 @@ CSS Rule Types
 | `:scope`                  | Current context in query selector or shadow DOM       | `:scope > h2 { font-weight: bold; }` | Used in scripts or scoped styling within components |
 
 ---
+
+# 🎨 Module 3: Colors, Units, and Values
+
+## 1. CSS Units Guide
+
+- CSS units define length, size, and spacing for elements. They are categorized as:
+  -✅ Absolute units – Fixed size, independent of screen
+  -✅ Relative units – Scales based on parent or environment
+
+### 1. 📦 Absolute Units
+
+| Unit | Name       | Description                       | Example            |
+| ---- | ---------- | --------------------------------- | ------------------ |
+| `px` | Pixel      | 1 device pixel (common base unit) | `font-size: 16px;` |
+| `pt` | Point      | 1/72 of 1 inch (used in print)    | `font-size: 12pt;` |
+| `cm` | Centimeter | Rare, print-oriented              | `width: 5cm;`      |
+| `mm` | Millimeter | Rare, print-oriented              | `height: 10mm;`    |
+| `in` | Inch       | 1in = 96px = 2.54cm               | `width: 1in;`      |
+| `pc` | Pica       | 1pc = 12pt                        | `font-size: 1pc;`  |
+
+> 📝 Note: Absolute units are best for print or highly controlled layouts.
+
+---
+
+### 2. 📐 Relative Units
+
+| Unit   | Name             | Description                                            | Example               |
+| ------ | ---------------- | ------------------------------------------------------ | --------------------- |
+| `%`    | Percent          | Relative to parent element (width, padding, etc.)      | `width: 50%;`         |
+| `em`   | Element          | Relative to the **font-size of the parent**            | `padding: 2em;`       |
+| `rem`  | Root Element     | Relative to the **root font-size** (usually 16px)      | `font-size: 1.5rem;`  |
+| `vw`   | Viewport Width   | 1% of the viewport’s width                             | `width: 50vw;`        |
+| `vh`   | Viewport Height  | 1% of the viewport’s height                            | `height: 100vh;`      |
+| `vmin` | Viewport Minimum | 1% of the smaller of vw or vh                          | `font-size: 2vmin;`   |
+| `vmax` | Viewport Maximum | 1% of the larger of vw or vh                           | `margin: 5vmax;`      |
+| `ch`   | Character        | Width of the “0” character of the element's font       | `width: 30ch;`        |
+| `ex`   | x-height         | Height of lowercase “x” of the element's font          | `line-height: 1.2ex;` |
+| `lh`   | Line Height Unit | Relative to the current element’s computed line height | `margin-top: 2lh;`    |
+
+> 💡 Common Use: Use rem for consistent typography, vw/vh for responsive layouts, and % for fluid designs.
+
+---
+
+### 3. 🛠️ Special Units (Function-based)
+
+| Unit / Function   | Description                               | Example                              |
+| ----------------- | ----------------------------------------- | ------------------------------------ |
+| `calc()`          | Combine units and math                    | `width: calc(100% - 60px);`          |
+| `clamp()`         | Clamp between min, ideal, and max sizes   | `font-size: clamp(1rem, 2vw, 2rem);` |
+| `min()` / `max()` | Choose minimum or maximum of given values | `width: min(100%, 600px);`           |
+
+---
+
+### 4. Best Practice Quick Tips
+
+| Goal                  | Best Unit          |
+| --------------------- | ------------------ |
+| Font size             | `rem` or `clamp()` |
+| Button spacing        | `em`               |
+| Full screen section   | `vh` / `vw`        |
+| Responsive box width  | `%` or `vw`        |
+| Fixed small icon size | `px`               |
+
+---

@@ -15,7 +15,7 @@
 - [x] Basic Selectors: `*`, `element`, `.class`, `#id`
 - [x] Grouping & Combinators: `div p`, `div > p`, `div + p`, `div ~ p`
 - [x] Attribute Selectors: `[type="text"]`, `[href^="https"]`
-- [ ] Advanced Selectors:
+- [x] Advanced Selectors:
   - `:is()`, `:where()`, `:has()`
   - `:focus-visible`, `:not()`
   - `:nth-child()`, `:nth-of-type()`
@@ -23,10 +23,10 @@
 ---
 
 ### 🎨 Module 3: Colors, Units, and Values
-- [ ] Color Formats: HEX, RGB(A), HSL(A)
-- [ ] Named Colors
-- [ ] Units: `px`, `em`, `rem`, `%`, `vh`, `vw`
-- [ ] Calculations: `calc()`, `clamp()`, `min()`, `max()`
+- [x] Color Formats: HEX, RGB(A), HSL(A)
+- [x] Named Colors
+- [x] Units: `px`, `em`, `rem`, `%`, `vh`, `vw`
+- [x] Calculations: `calc()`, `clamp()`, `min()`, `max()`
 
 ---
 
