@@ -468,6 +468,8 @@ And apply it like:
 
 ```
 
+---
+
 ## 3. Positioning (Precise Control in CSS)
 
 - Positioning is key to layout control and creating interactive or layered interfaces.
@@ -608,3 +610,336 @@ And apply it like:
   - absolute
   - fixed
   - sticky
+
+---
+
+## 📦 Flexbox – One-Dimensional Layout
+
+## 🔹 Container Properties
+
+| **Property**      | **Values**                                                                          | **Description**                                        |
+| ----------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `display`         | `flex`, `inline-flex`                                                               | Defines a flex container                               |
+| `flex-direction`  | `row`, `row-reverse`, `column`, `column-reverse`                                    | Direction of items in the main axis                    |
+| `flex-wrap`       | `nowrap`, `wrap`, `wrap-reverse`                                                    | Controls whether items wrap to the next line           |
+| `flex-flow`       | `<flex-direction> <flex-wrap>`                                                      | Shorthand for `flex-direction` + `flex-wrap`           |
+| `justify-content` | `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly` | Aligns items along the **main axis**                   |
+| `align-items`     | `stretch`, `flex-start`, `flex-end`, `center`, `baseline`                           | Aligns items along the **cross axis**                  |
+| `align-content`   | `stretch`, `flex-start`, `flex-end`, `center`, `space-between`, `space-around`      | Aligns **wrapped lines** in the flex container         |
+| `gap`             | Any length (`10px`, `1rem`)                                                         | Space between items (can use `row-gap` & `column-gap`) |
+
+---
+
+## 🔹 Item (Child) Properties
+
+| **Property**  | **Values / Syntax**                  | **Description**                                              |
+| ------------- | ------------------------------------ | ------------------------------------------------------------ |
+| `order`       | `<integer>` (`0` default)            | Controls visual order of the item                            |
+| `flex-grow`   | `<number>` (`0` default)             | Defines how much item **can grow** relative to others        |
+| `flex-shrink` | `<number>` (`1` default)             | Defines how much item **can shrink** when space is tight     |
+| `flex-basis`  | `<length>` / `auto` (`auto` default) | Sets **initial main size** of item before grow/shrink        |
+| `flex`        | `<grow> <shrink> <basis>`            | Shorthand for grow, shrink, basis (e.g., `flex: 1 0 200px;`) |
+| `align-self`  | Same as `align-items` values         | Overrides `align-items` for a specific item                  |
+
+---
+
+## 🔁 Flex Directions
+
+| `flex-direction` | Main Axis    | Cross Axis   |
+| ---------------- | ------------ | ------------ |
+| `row`            | Horizontal → | Vertical ↓   |
+| `row-reverse`    | Horizontal ← | Vertical ↓   |
+| `column`         | Vertical ↓   | Horizontal → |
+| `column-reverse` | Vertical ↑   | Horizontal → |
+
+---
+
+## ✨ `justify-content` Examples
+
+| Value           | Description                                    |
+| --------------- | ---------------------------------------------- |
+| `flex-start`    | Items align to start of main axis              |
+| `center`        | Items centered along main axis                 |
+| `flex-end`      | Items align to end of main axis                |
+| `space-between` | Equal spacing between items (edges flush)      |
+| `space-around`  | Equal space around items (half space on edges) |
+| `space-evenly`  | Equal space between and at edges               |
+
+---
+
+## ✨ `align-items` Examples
+
+| Value        | Behavior on Cross Axis                           |
+| ------------ | ------------------------------------------------ |
+| `stretch`    | Items stretch to fill container height (default) |
+| `flex-start` | Items align to start of cross axis               |
+| `flex-end`   | Items align to end of cross axis                 |
+| `center`     | Items are centered vertically (or horizontally)  |
+| `baseline`   | Aligns text baselines of items                   |
+
+---
+
+## 🔤 Flex Shorthand Example
+
+```css
+.item {
+  flex: 1 1 200px;
+}
+/* flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 200px; */
+```
+
+---
+
+## 1. Flex: Container Properties
+
+### 1. display: flex vs display: inline-flex
+
+| Property               | Container Type | Child Layout         | Example Use                      |
+| ---------------------- | -------------- | -------------------- | -------------------------------- |
+| `display: flex`        | Block-level    | Flexbox (row/column) | Full-width sections, layout rows |
+| `display: inline-flex` | Inline-level   | Flexbox (row/column) | Buttons, icons inline with text  |
+
+---
+
+### 2. flex-direction
+
+#### All 4 flex-direction Values
+
+| Value            | Direction     | Main Axis  | Cross Axis |
+| ---------------- | ------------- | ---------- | ---------- |
+| `row`            | Left ➡️ Right | Horizontal | Vertical   |
+| `row-reverse`    | Right ➡️ Left | Horizontal | Vertical   |
+| `column`         | Top ⬇️ Bottom | Vertical   | Horizontal |
+| `column-reverse` | Bottom ⬆️ Top | Vertical   | Horizontal |
+
+---
+
+### 3.flex-wrap: wrap;
+
+| Value          | Description                            | Use When…                                      |
+| -------------- | -------------------------------------- | ---------------------------------------------- |
+| `nowrap`       | All items stay in one row/column       | You want a single-line layout                  |
+| `wrap`         | Items wrap to next line (normal order) | You want a responsive, multiple-row layout     |
+| `wrap-reverse` | Items wrap in reverse (bottom-up)      | Rare cases (special designs like chat bubbles) |
+
+---
+
+### 4. flex-flow
+
+- ✅ flex-flow = flex-direction + flex-wrap
+
+- It combines these two properties into one line.
+
+```
+flex-flow: <flex-direction> <flex-wrap>;
+
+```
+
+### 5. justify-content
+
+| Value                  | Behavior                                                             |
+| ---------------------- | -------------------------------------------------------------------- |
+| `flex-start` (default) | Items align to the **start (left)**                                  |
+| `flex-end`             | Items align to the **end (right)**                                   |
+| `center`               | Items are **centered** horizontally                                  |
+| `space-between`        | Items spread out, **first at start**, **last at end**, space between |
+| `space-around`         | Items have **equal space around** them                               |
+| `space-evenly`         | Items have **equal space between AND around**                        |
+| `start` / `end`        | Logical directions (used with writing-mode / direction)              |
+| `left` / `right`       | Physical directions (LTR / RTL layout support)                       |
+
+---
+
+Visual Summary
+
+[flex-start] | 1 2 3
+[center] | 1 2 3
+[flex-end] | 1 2 3
+[space-between] | 1 2 3
+[space-around] | 1 2 3
+[space-evenly] | 1 2 3
+
+---
+
+## 6. align-items
+
+- align-items controls how flex items align on the cross axis (usually vertical, if flex-direction is row).
+
+| Value        | Description                               | Use Case Example                  |
+| ------------ | ----------------------------------------- | --------------------------------- |
+| `stretch`    | Items stretch to fill container (default) | Equal height cards, boxes         |
+| `flex-start` | Align items to top (start of cross axis)  | Top-aligned labels or inputs      |
+| `flex-end`   | Align items to bottom (end of cross axis) | Bottom-aligned buttons            |
+| `center`     | Center items vertically                   | Centered button rows, navbars     |
+| `baseline`   | Align items by text line                  | Align text-heavy content properly |
+
+---
+
+## 7. align-content
+
+| Value               | Description                         | Best Use Case                           |
+| ------------------- | ----------------------------------- | --------------------------------------- |
+| `flex-start`        | Rows aligned to the top             | Default row stacking                    |
+| `flex-end`          | Rows aligned to the bottom          | Push rows to bottom                     |
+| `center`            | Rows centered vertically            | Center-align all wrapped content        |
+| `space-between`     | Rows equally spaced – top to bottom | Even distribution with no outer padding |
+| `space-around`      | Equal space around each row         | Balanced look                           |
+| `space-evenly`      | Equal space all over                | Fully balanced layout                   |
+| `stretch` (default) | Rows expand to fill the height      | Auto-stretch layout (default behavior)  |
+
+---
+
+## 8. gap
+
+| Property     | Description                             | Example             |
+| ------------ | --------------------------------------- | ------------------- |
+| `gap`        | Sets space between **rows and columns** | `gap: 10px 20px;`   |
+| `row-gap`    | Sets space **between rows**             | `row-gap: 10px;`    |
+| `column-gap` | Sets space **between columns**          | `column-gap: 20px;` |
+
+---
+
+## 🔹 2. Item (Child) Properties
+
+| **Property**  | **Values / Syntax**                  | **Description**                                              |
+| ------------- | ------------------------------------ | ------------------------------------------------------------ |
+| `order`       | `<integer>` (`0` default)            | Controls visual order of the item                            |
+| `flex-grow`   | `<number>` (`0` default)             | Defines how much item **can grow** relative to others        |
+| `flex-shrink` | `<number>` (`1` default)             | Defines how much item **can shrink** when space is tight     |
+| `flex-basis`  | `<length>` / `auto` (`auto` default) | Sets **initial main size** of item before grow/shrink        |
+| `flex`        | `<grow> <shrink> <basis>`            | Shorthand for grow, shrink, basis (e.g., `flex: 1 0 200px;`) |
+| `align-self`  | Same as `align-items` values         | Overrides `align-items` for a specific item                  |
+
+---
+
+These properties are applied to **individual flex items** inside a flex container. They control layout behavior like order, size, growth, shrinkage, and alignment.
+
+---
+
+| **Property**  | **Values / Syntax**                  | **Description**                                                                             |
+| ------------- | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| `order`       | `<integer>` (`0` default)            | Controls the **visual order** of the item inside the container. Lower values come first.    |
+| `flex-grow`   | `<number>` (`0` default)             | Defines how much an item **can grow** relative to others **when extra space is available**. |
+| `flex-shrink` | `<number>` (`1` default)             | Defines how much an item **can shrink** relative to others **when space is tight**.         |
+| `flex-basis`  | `<length>` / `auto` (`auto` default) | Sets the **initial size** of the item **before** growing or shrinking.                      |
+| `flex`        | `<grow> <shrink> <basis>`            | Shorthand for `flex-grow`, `flex-shrink`, and `flex-basis`. Example: `flex: 1 0 200px;`     |
+| `align-self`  | Same as `align-items` values         | Allows you to **override vertical alignment** (cross-axis) for a single item.               |
+
+---
+
+## 🔹 `order`
+
+**Description**: Controls the **display order** of flex items without changing HTML order.
+
+```css
+.item {
+  order: 2;
+}
+```
+
+- Lower `order` values appear first
+- Items with the same `order` follow the HTML order
+
+---
+
+## 🔹 `flex-grow`
+
+**Description**: Defines how much the item **grows** relative to others **when there is space**.
+
+```css
+.item {
+  flex-grow: 1;
+}
+```
+
+- `0` = don’t grow
+- `1+` = grow relative to other items
+
+**Example**:
+
+- `flex-grow: 2;` → grows **twice as much** as `flex-grow: 1`
+
+---
+
+## 🔹 `flex-shrink`
+
+**Description**: Defines how much the item **shrinks** when space is too small.
+
+```css
+.item {
+  flex-shrink: 1;
+}
+```
+
+- `0` = do not shrink
+- Higher values shrink more compared to others
+
+**Example**:
+
+- `flex-shrink: 2;` → shrinks **twice as much** as `flex-shrink: 1`
+
+---
+
+## 🔹 `flex-basis`
+
+**Description**: Sets the **starting size** before grow/shrink kicks in.
+
+```css
+.item {
+  flex-basis: 150px;
+}
+```
+
+- `auto` = use content size or width/height
+- `0` = no base size; grow/shrink takes full control
+
+---
+
+## 🔹 `flex` (shorthand)
+
+**Description**: Combines `flex-grow`, `flex-shrink`, and `flex-basis`.
+
+```css
+.item {
+  flex: 1 0 200px;
+}
+```
+
+- First: grow
+- Second: shrink
+- Third: basis
+
+**Common shortcuts**:
+
+- `flex: 1;` → `1 1 0` (common responsive layout)
+- `flex: 0 0 auto;` → fixed-size item
+- `flex: 1 1 200px;` → grow/shrink from 200px
+
+---
+
+## 🔹 `align-self`
+
+**Description**: Overrides `align-items` **for one item** to control vertical alignment on the cross axis.
+
+```css
+.item {
+  align-self: center;
+}
+```
+
+**Values**:
+
+- `auto` (default)
+- `flex-start`
+- `flex-end`
+- `center`
+- `baseline`
+- `stretch`
+
+**Use Case**:
+
+- Align a single item differently than the rest.
+
+---
