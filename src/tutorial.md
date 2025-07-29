@@ -284,3 +284,82 @@ CSS Rule Types
 | Fixed small icon size | `px`               |
 
 ---
+
+# Module 4: The Box Model
+
+## 1. What is the CSS Box Model?
+
+| **Part**  | **Description**                                                  |
+| --------- | ---------------------------------------------------------------- |
+| `Content` | The actual content (text, image, etc.) inside the box.           |
+| `Padding` | Space **inside** the box, around the content.                    |
+| `Border`  | A line surrounding the padding and content.                      |
+| `Margin`  | Space **outside** the box that separates it from other elements. |
+
+```
++----------------------------+
+|        Margin              |
+|  +----------------------+  |
+|  |      Border          |  |
+|  |  +----------------+  |  |
+|  |  |   Padding      |  |  |
+|  |  |  +----------+  |  |  |
+|  |  |  | Content  |  |  |  |
+|  |  |  +----------+  |  |  |
+|  |  +----------------+  |  |
+|  +----------------------+  |
++----------------------------+
+
+```
+
+### 1.1 Box Model Properties
+
+| **Property** | **Usage**                         | **Example**                |
+| ------------ | --------------------------------- | -------------------------- |
+| `width`      | Width of the content area         | `width: 300px;`            |
+| `height`     | Height of the content area        | `height: 200px;`           |
+| `padding`    | Space inside the element          | `padding: 10px;`           |
+| `border`     | Thickness and style of the border | `border: 1px solid black;` |
+| `margin`     | Space outside the element         | `margin: 20px;`            |
+
+---
+
+### 1.2 Box Sizing
+
+| **Value**     | **Effect**                                                                               |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| `content-box` | (Default) Width/height apply **only** to content. Padding and border **add extra size**. |
+| `border-box`  | Width/height **include** padding and border. Recommended for layouts.                    |
+
+---
+
+### 1.2 Overflow
+
+| **Property** | **Description**                  | **Example**           |
+| ------------ | -------------------------------- | --------------------- |
+| `overflow`   | Sets overflow for both axes      | `overflow: auto;`     |
+| `overflow-x` | Sets overflow on horizontal axis | `overflow-x: scroll;` |
+| `overflow-y` | Sets overflow on vertical axis   | `overflow-y: hidden;` |
+
+---
+
+| **Value** | **Behavior**                                        |
+| --------- | --------------------------------------------------- |
+| `visible` | Content spills outside (default)                    |
+| `hidden`  | Overflow is clipped and not visible                 |
+| `scroll`  | Always shows scrollbars even if not needed          |
+| `auto`    | Shows scrollbars **only when** content is too large |
+
+---
+
+### 1.3 Outline
+
+Outline is similar to border but does not take up space and is outside the element box.
+
+| **Property**     | **Description**                       | **Example**                 |
+| ---------------- | ------------------------------------- | --------------------------- |
+| `outline`        | Sets width, style, and color          | `outline: 2px dashed blue;` |
+| `outline-color`  | Sets color                            | `outline-color: red;`       |
+| `outline-style`  | Sets style                            | `outline-style: dotted;`    |
+| `outline-width`  | Sets thickness                        | `outline-width: 3px;`       |
+| `outline-offset` | Sets space between border and outline | `outline-offset: 4px;`      |

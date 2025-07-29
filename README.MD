@@ -31,9 +31,9 @@
 ---
 
 ### 📐 Module 4: The Box Model
-- [ ] Content, Padding, Border, Margin
-- [ ] `box-sizing: content-box` vs `border-box`
-- [ ] Overflow, Outline, Border Shorthand
+- [x] Content, Padding, Border, Margin
+- [x] `box-sizing: content-box` vs `border-box`
+- [x] Overflow, Outline, Border Shorthand
 
 ---
 
