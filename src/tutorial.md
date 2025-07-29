@@ -363,3 +363,248 @@ Outline is similar to border but does not take up space and is outside the eleme
 | `outline-style`  | Sets style                            | `outline-style: dotted;`    |
 | `outline-width`  | Sets thickness                        | `outline-width: 3px;`       |
 | `outline-offset` | Sets space between border and outline | `outline-offset: 4px;`      |
+
+--
+
+# Module 5: Layout Systems
+
+## 1. What is a Layout System?
+
+A layout system in CSS determines how elements are arranged and positioned on a webpage.
+
+### 1.1 Normal Document Flow (Default Layout Behavior)
+
+| Type            | Behavior                                                               |
+| --------------- | ---------------------------------------------------------------------- |
+| **Block-level** | Stacks vertically, takes full width (e.g., `<div>`, `<p>`)             |
+| **Inline**      | Flows horizontally inside block-level elements (e.g., `<span>`, `<a>`) |
+
+## 2. Float Layout (Legacy, but still useful)
+
+### What is it?
+
+- Originally meant for wrapping text around images, developers started using it to build entire layouts before Flexbox and Grid.
+
+#### 🔸 Properties:
+
+| Property | Description                            |
+| -------- | -------------------------------------- |
+| `float`  | Moves an element to the left or right  |
+| `clear`  | Prevents elements from wrapping around |
+
+---
+
+#### ❌ Problem Example (without clearfix):
+
+```html
+<div class="container">
+  <div class="box1">Box 1</div>
+  <div class="box2">Box 2</div>
+</div>
+```
+
+```css
+.container {
+  background: #eee;
+}
+
+.box1,
+.box2 {
+  float: left;
+  width: 50%;
+  height: 100px;
+}
+```
+
+> 💥 The .container has no height because both children are floated. You won't see its background color or borders.
+
+- Because floated elements are removed from normal flow, so they can cause:
+  - Parent height collapse
+  - Next elements overlapping
+
+### Solution
+
+1. Manual Clearing
+
+```
+.clear-both { clear: both; }
+```
+
+2. Clearfix technique
+
+```
+::after { content: ""; display: table; clear: both; }
+```
+
+3. overflow: hidden;
+   It works — but not always ideal.
+
+```
+.container {
+ overflow: hidden;
+}
+```
+
+below:
+
+```
+.container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+Or use the utility class:
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+And apply it like:
+<div class="container clearfix">
+  ...
+</div>
+
+```
+
+## 3. Positioning (Precise Control in CSS)
+
+- Positioning is key to layout control and creating interactive or layered interfaces.
+
+### Why Learn Positioning?
+
+- Place tooltips, modals, and dropdowns exactly where needed.
+- Layer elements on top of each other (z-index).
+- Create layouts that go beyond normal flow (header overlays, sticky banners, etc).
+
+### 1. static (Default)
+
+- Default position.
+- No top/left/right/bottom offsets work here.
+- Stays in normal document flow.
+
+```
+<div class="box static-box">Static Box</div>
+
+```
+
+```
+.static-box {
+  position: static;
+  background: lightgray;
+  padding: 10px;
+}
+```
+
+> 🧠 You don’t need to set this unless resetting from another value.
+
+### 3. relative
+
+- Moves the element relative to its normal position.
+- Still occupies its original space in flow.
+
+```
+<div class="box relative-box">Relative Box</div>
+
+```
+
+```
+.relative-box {
+  position: relative;
+  top: 20px;
+  left: 40px;
+  background: lightblue;
+}
+
+```
+
+> 🧠 Useful for positioning child elements (absolute inside relative).
+
+### 3. absolute
+
+- Removed from normal flow.
+- Positioned relative to the nearest ancestor with position: relative|absolute|fixed|sticky.
+- If no ancestor is positioned, falls back to the <html>.
+
+```
+<div class="container">
+  Parent
+  <div class="tooltip">Absolute Child</div>
+</div>
+
+```
+
+```
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: lightgreen;
+}
+
+.tooltip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: orange;
+  padding: 5px;
+}
+
+```
+
+### 4. fixed
+
+- Fixed relative to viewport.
+- Doesn’t move when you scroll.
+- Great for sticky buttons or modals.
+
+```
+<div class="fixed-box">Fixed at Bottom</div>
+
+```
+
+```
+.fixed-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: crimson;
+  color: white;
+  padding: 10px;
+}
+
+```
+
+> 🧠 Always visible – perfect for “Back to Top” or “Help” buttons.
+
+### 5. sticky
+
+- Starts off as relative, then becomes fixed when scrolling.
+- Useful for sticky headers.
+
+```
+<div class="sticky-header">I stick to the top!</div>
+
+```
+
+```
+.sticky-header {
+ position: sticky;
+ top: 0;
+ background: gold;
+ padding: 10px;
+ z-index: 100;
+}
+
+```
+
+> 🧠 Parent container should have height and not be overflow: hidden.
+
+### 6. Position Offsets: top, left, right, bottom
+
+- Only work with:
+  - relative
+  - absolute
+  - fixed
+  - sticky
