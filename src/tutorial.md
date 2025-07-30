@@ -368,6 +368,17 @@ Outline is similar to border but does not take up space and is outside the eleme
 
 # Module 5: Layout Systems
 
+| **Layout System** | **Best For**                     | **Use Case Examples**                                      |
+| ----------------- | -------------------------------- | ---------------------------------------------------------- |
+| **Normal Flow**   | Simple stacking                  | Blog content, paragraphs, headings, default HTML rendering |
+| **Float**         | Text wrapping                    | Wrapping text around images, badges inside paragraphs      |
+| **Position**      | Overlays, tooltips, sticky items | Modal windows, tooltips, sticky headers, dropdowns         |
+| **Flexbox**       | Rows/columns (1D layouts)        | Navigation bars, card lists, buttons in a row              |
+| **Grid**          | Complex pages, 2D control        | Dashboards, magazine layouts, multi-column card grids      |
+| **Multi-Column**  | Text content                     | Articles, blog posts, eBooks, side-by-side paragraphs      |
+
+---
+
 ## 1. What is a Layout System?
 
 A layout system in CSS determines how elements are arranged and positioned on a webpage.
