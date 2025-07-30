@@ -1,0 +1,46 @@
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid black;
+  background-color: azure;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix-modern::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  border: 3px solid sandybrown;
+  width: 50%;
+}
+
+.container div {
+  float: left;
+  width: 150px;
+  height: 250px;
+  border: 3px solid red;
+}
+
+.float-left-inline {
+  float: inline-start;
+}
+
+.float-right-inline {
+  float: inline-end;
+}
