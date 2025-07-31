@@ -1,0 +1,278 @@
+* {
+  font-size: 16px;
+}
+
+p {
+  font-weight: 700;
+}
+
+#pId {
+  color: aquamarine;
+}
+
+.pClass {
+  color: red;
+}
+
+input[readonly] {
+  border: 3px solid red;
+}
+input[required] {
+  background-color: azure;
+}
+
+input[type='text'] {
+  border: 2px dashed green;
+}
+
+.startWith[href^='https'] {
+  color: rgb(13, 255, 0);
+}
+
+.endWith[href$='.in'] {
+  border: 1px solid rgb(240, 19, 19);
+}
+
+.contains[href*='.in'] {
+  border: 5px solid rgb(240, 19, 210);
+}
+
+button[class~='button'] {
+  background-color: blanchedalmond;
+}
+
+button[class*='button'] {
+  border: 3px solid red;
+}
+
+p[lang|='en'] {
+  color: blueviolet;
+}
+
+.descendant p {
+  color: blue;
+}
+
+.direct-child > p {
+  color: brown;
+}
+
+.adjacent + p {
+  color: rgb(60, 255, 0);
+}
+
+.general ~ p {
+  color: rgb(0, 247, 255);
+}
+
+/* 
+Pseudo Classes
+*/
+
+.box {
+  border: 3px solid black;
+  width: 100px;
+  height: 100px;
+}
+
+.class-hover:hover {
+  background-color: blueviolet;
+}
+
+.class-focus:focus {
+  border: 5px solid rgb(255, 0, 234);
+  background-color: blueviolet;
+}
+
+.focus-class:focus {
+  background-color: green;
+}
+
+.focus-class:focus-visible {
+  background-color: blue;
+}
+
+.focus-within {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed gray;
+}
+
+.focus-within:focus-within {
+  border: 5px dashed blueviolet;
+}
+
+.check:checked {
+  accent-color: brown;
+}
+.disabled-class:disabled {
+  border: 1px solid red;
+  background-color: brown;
+}
+
+.inputClass:enabled {
+  background-color: antiquewhite;
+}
+
+.read-write:read-write {
+  background-color: #e8f5e9; /* Light green */
+  border: 2px solid #4caf50;
+  padding: 8px;
+}
+
+.form-control:default {
+  border: 3px solid rgb(255, 6, 226);
+}
+.form-control:required {
+  border: 3px solid red;
+}
+
+.check-box-class:default {
+  outline: 3px solid red;
+}
+
+.range:in-range {
+  border: 3px solid blueviolet;
+}
+
+.range:out-of-range {
+  border: 3px solid red;
+}
+
+#checkID:indeterminate {
+  outline: 5px solid brown;
+}
+
+.list > li:first-child {
+  background-color: #4caf50;
+}
+
+.list > li:last-child {
+  background-color: red;
+}
+
+.list > li:nth-child(3) {
+  background-color: orange;
+}
+
+.list > li:nth-last-child(3) {
+  background-color: orange;
+}
+.list > li > p:only-child {
+  color: cadetblue;
+}
+
+.box-cantainer > div {
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
+}
+.box-cantainer > div > h6:first-of-type {
+  margin: 0;
+  background-color: aquamarine;
+}
+.box-cantainer > div > p:first-of-type {
+  margin: 0;
+  color: blueviolet;
+}
+.box-cantainer > div > h5:first-of-type {
+  margin: 0;
+  color: rgb(229, 249, 2);
+}
+.box-cantainer > div > p:nth-of-type(3) {
+  margin: 0;
+  color: rgb(229, 249, 2);
+}
+.once-type {
+  border: 5px dashed bisque;
+}
+.once-type > div > p:only-of-type {
+  color: rgb(229, 249, 2);
+}
+.once-type > div:empty {
+  border: 5px dashed red;
+  width: 50px;
+  height: 50px;
+}
+.once-type > div :is(p:first-of-type) {
+  background-color: cadetblue;
+  width: 100px;
+  height: 100px;
+  border: 5px dashed rgb(143, 143, 143);
+}
+
+.loagic {
+  border: 3px dashed green;
+}
+.loagic div {
+  width: 50px;
+  height: 50px;
+  border: 2px solid gray;
+}
+
+.loagic :is(div:first-child:hover) {
+  background-color: gray;
+}
+
+.loagic div p:only-child {
+  background-color: red;
+}
+
+.loagic div:not(.loagic div:has(p:only-child)) {
+  background-color: green;
+}
+/* .loagic div :not(p:only-of-type){
+    background-color: red;
+} */
+
+.logic-selector {
+  border: 3px dashed black;
+}
+
+.logic-selector div {
+  border: 2px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+.logic-selector div:not(:has(p)) {
+  background-color: aquamarine;
+}
+
+.logic-selector div:is(:has(h6, h5)) {
+  background-color: brown;
+}
+
+button:not([disabled]) {
+  background-color: aquamarine;
+}
+button:not([disabled]):hover {
+  background-color: black;
+}
+
+.div-box :is(article, section) :is(h6, h5) {
+  margin: 0;
+  color: #4caf50;
+  background-color: cadetblue;
+}
+
+.btn {
+  padding: 32px;
+  border: 3px solid rgb(252, 34, 34);
+}
+
+:where(button) {
+  padding: 16px;
+  border: 3px dashed rgb(252, 34, 34);
+}
+
+.main-form button {
+  border: 3px solid rgb(252, 34, 34);
+}
+
+.actvie {
+  background-color: aqua;
+}
+.main-form:has(p.actvie) {
+  color: #4caf50;
+}

@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Selctors</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- ___________________________________ -->
+    <!-- 1. Basic Selectors -->
+    <!-- ___________________________________ -->
+
+    <h1>1. Basic Selectors</h1>
+    <hr />
+
+    <p>1. *</p>
+    <p>2. element</p>
+    <p id="pId">3. element id</p>
+    <p class="pClass">4. element class</p>
+
+    <!-- ___________________________________ -->
+    <!-- 2. Attribute Selectors -->
+    <!-- ___________________________________ -->
+
+    <h1>2. Attribute Selectors</h1>
+    <hr />
+
+    <h6>[attr]</h6>
+    <input type="text" readonly />
+    <input type="text" required />
+
+    <h6>[attr="value"]</h6>
+    <a href="https://www.google.com">google</a>
+    <a href="https://www.faceboock.com">faceboock</a>
+    <a href="http://www.intagram.com">intagram</a>
+
+    <h6>[attr^="value"]</h6>
+    <a class="startWith" href="https://www.google.com"
+      >https://www.google.com</a
+    >
+    <a class="startWith" href="https://www.faceboock.com"
+      >https://www.faceboock.com</a
+    >
+    <a class="startWith" href="http://www.intagram.com"
+      >http://www.intagram.com</a
+    >
+
+    <h6>[attr$="value"]</h6>
+    <a class="endWith" href="https://www.google.in">https://www.google.in</a>
+    <a class="endWith" href="https://www.faceboock.com"
+      >https://www.faceboock.com</a
+    >
+    <a class="endWith" href="http://www.intagram.in">http://www.intagram.in</a>
+
+    <h6>[attr*="value"]</h6>
+    <a class="contains" href="https://www.google.com">google.com</a>
+    <a class="contains" href="https://www.faceboock.com.in">faceboock.com.in</a>
+    <a class="contains" href="http://www.intagram.com">intagram.com</a>
+
+    <h6>[attr~="value"]</h6>
+    <button class="primary button">Click</button>
+    <!-- ✅ "button" is a separate word -->
+    <button class="button-large">Click</button>
+    <!-- ❌ "button-large" is not a separate word -->
+    <button class="btn button">Click</button>
+    <!-- ✅ "button" is a separate word -->
+
+    <h6>[attr|="value"]</h6>
+    <p lang="en">English</p>
+    <!-- ✅ Exact match -->
+    <p lang="en-US">US English</p>
+    <!-- ✅ Starts with "en-" -->
+    <p lang="en_GB">UK English</p>
+    <!-- ❌ Underscore, not hyphen -->
+    <p lang="english">English</p>
+    <!-- ❌ No hyphen after "en" -->
+
+    <!-- ___________________________________ -->
+    <!-- 3. Combinators-->
+    <!-- ___________________________________ -->
+
+    <h1>3. Combinators</h1>
+    <hr />
+
+    <div class="descendant">
+      <h6>headaing 1</h6>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <h6>headaing 2</h6>
+      <p>item 4</p>
+      <p>item 5</p>
+      <div>
+        <h6>headaing 1</h6>
+        <p>item 1</p>
+        <p>item 2</p>
+        <p>item 3</p>
+        <h6>headaing 2</h6>
+        <p>item 4</p>
+        <p>item 5</p>
+      </div>
+    </div>
+
+    <h1>Driect</h1>
+    <hr />
+    <div class="direct-child">
+      <h6>headaing 1</h6>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <h6>headaing 2</h6>
+      <p>item 4</p>
+      <p>item 5</p>
+      <div>
+        <h6>headaing 1</h6>
+        <p>item 1</p>
+        <p>item 2</p>
+        <p>item 3</p>
+        <h6>headaing 2</h6>
+        <p>item 4</p>
+        <p>item 5</p>
+      </div>
+    </div>
+
+    <h1>Adjacent</h1>
+    <hr />
+    <div>
+      <h6 class="adjacent">headaing 1</h6>
+      <p>item 1</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <p>item 4</p>
+      <p>item 5</p>
+    </div>
+
+    <h1>General</h1>
+    <hr />
+    <div>
+      <h6>headaing 1</h6>
+      <p class="general">item 1</p>
+      <p>item 2</p>
+      <p>item 3</p>
+      <h6>headaing 2</h6>
+      <p>item 4</p>
+      <p>item 5</p>
+      <div>
+        <h6>headaing 1</h6>
+        <p>item 1</p>
+        <p>item 2</p>
+        <p>item 3</p>
+        <h6>headaing 2</h6>
+        <p>item 4</p>
+        <p>item 5</p>
+      </div>
+    </div>
+
+    <h1>5. Pseudo Classes</h1>
+    <hr />
+
+    <div class="box class-hover">Hover</div>
+
+    <div class="box class-active">:active</div>
+
+    <div class="box">
+      <input class="class-focus" type="text" tabindex="0" alt="a" />
+    </div>
+
+    <button class="focus-class">Focus vs Focus-visible</button>
+
+    <div class="focus-within">
+      <input type="text" />
+    </div>
+
+    <h1>UI State</h1>
+    <hr />
+    <form action="">
+      <label for=""
+        >item 1
+        <input class="check" type="checkbox" checked />
+      </label>
+      <label for=""
+        >item 2
+        <input class="check" type="checkbox" />
+      </label>
+
+      <input class="disabled-class" type="text" disabled />
+
+      <input class="inputClass" type="text" placeholder="Enabled field" />
+      <input
+        class="inputClass"
+        type="text"
+        disabled
+        placeholder="Disabled field"
+      />
+    </form>
+
+    <p class="read-write" contenteditable="true">Click to edit</p>
+    <input type="text" class="read-write" />
+
+    <hr />
+    <input class="form-control" type="text" placeholder="Optional" />
+    <input class="form-control" type="email" required placeholder="Required" />
+
+    <hr />
+    <label for="">
+      defult
+      <input class="check-box-class" type="checkbox" checked />
+      <input class="check-box-class" type="checkbox" />
+    </label>
+
+    <hr />
+    <input
+      class="range"
+      type="number"
+      min="10"
+      max="20"
+      placeholder="Enter 10-20"
+    />
+    <input
+      class="range"
+      type="number"
+      min="10"
+      max="20"
+      placeholder="Enter 10-20"
+    />
+
+    <hr />
+    <label for="">
+      item 1
+      <input type="checkbox" id="checkID" />
+    </label>
+
+    <ul class="list">
+      <li class="list-item">item 1</li>
+      <li class="list-item">item 2</li>
+      <li class="list-item">item 3</li>
+      <li class="list-item">item 4</li>
+      <li class="list-item">item 5</li>
+      <li class="list-item">item 6</li>
+      <li class="list-item">item 7</li>
+      <li class="list-item">
+        <p>tag p 1</p>
+      </li>
+      <li class="list-item">
+        <p>tag p 1</p>
+        <p>tag p 2</p>
+      </li>
+      <li class="list-item">
+        <p>tag p 1</p>
+      </li>
+      <li class="list-item">item 8</li>
+    </ul>
+
+    <div class="box-cantainer">
+      <div>
+        <h6>heading</h6>
+        <p>descrption</p>
+        <h5>footer</h5>
+      </div>
+      <div>
+        <h5>footer</h5>
+        <h6>heading</h6>
+        <h6>heading</h6>
+        <p>descrption</p>
+      </div>
+      <div>
+        <h6>heading</h6>
+        <h5>footer</h5>
+        <p>descrption</p>
+      </div>
+      <div>
+        <p>descrption</p>
+        <p>descrption</p>
+        <p>descrption</p>
+        <p>descrption</p>
+        <p>descrption</p>
+        <p>descrption</p>
+      </div>
+    </div>
+
+    <div class="once-type">
+      <div></div>
+      <div>
+        <p>descrption 1</p>
+      </div>
+      <div>
+        <p>descrption 2</p>
+        <p>descrption 2</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="loagic">
+      <div class="box">
+        <p>item 1</p>
+      </div>
+      <div class="box">item 2</div>
+      <div class="box">item 3</div>
+      <div class="box">item 4</div>
+      <div class="box">
+        <p>item 1</p>
+        <p>item 1</p>
+      </div>
+    </div>
+
+    <hr />
+    <div class="logic-selector">
+      <div class="box">item 1</div>
+      <div class="box">item 2</div>
+      <div class="box">item 3</div>
+      <div class="box">item 4</div>
+      <div class="box">
+        item 4
+        <p>paragrah</p>
+      </div>
+      <div class="box">
+        item 5
+        <h5>Heading</h5>
+        <h6>Heading</h6>
+      </div>
+    </div>
+
+    <button disabled>Disabled</button>
+    <button>not Disabled</button>
+
+    <div class="div-box">
+      <article>
+        <h5>Heading 5</h5>
+        <p>Heading parapgrap</p>
+
+        <h6>Heading 6</h6>
+        <p>Heading parapgrap</p>
+      </article>
+
+      <section>
+        <h5>Heading 5</h5>
+        <p>Heading parapgrap</p>
+
+        <h6>Heading 6</h6>
+        <p>Heading parapgrap</p>
+      </section>
+    </div>
+
+    <hr />
+
+    <button class="">Button</button>
+
+    <div class="main-form">
+      <p class="">hig</p>
+      <button class="">submit</button>
+    </div>
+
+    <hr />
+
+    <script src="index.js"></script>
+  </body>
+</html>
