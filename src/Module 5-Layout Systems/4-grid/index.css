@@ -1,0 +1,30 @@
+.dashboard {
+  border: 1px solid blueviolet;
+  display: grid;
+  grid-template-columns: 100px 1fr 100px; /* Using fr unit for flexibility */
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+    'sider header header'
+    'sider main .'
+    '. footer .';
+}
+
+.header {
+  grid-area: header;
+  background: lightblue;
+}
+
+.sider {
+  grid-area: sider;
+  background: lightgreen;
+}
+
+.main {
+  grid-area: main;
+  background: lightyellow;
+}
+
+.footer {
+  grid-area: footer;
+  background: lightpink;
+}

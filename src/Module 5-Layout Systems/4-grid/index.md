@@ -4,6 +4,19 @@ CSS Grid Layout is a **powerful layout system** designed for building two-dimens
 
 ---
 
+## 📦 Key Concepts
+
+| Term               | Description                                      |
+| ------------------ | ------------------------------------------------ |
+| **Grid Container** | The parent element that uses `display: grid`.    |
+| **Grid Items**     | The direct children of the grid container.       |
+| **Grid Lines**     | The dividing lines between rows and columns.     |
+| **Grid Tracks**    | Rows and columns (space between two grid lines). |
+| **Grid Cells**     | Single space formed by one row and one column.   |
+| **Grid Area**      | A rectangular area made of multiple cells.       |
+
+---
+
 ## ✅ 1. Grid Container Properties
 
 These are applied to the **grid container** (parent).
