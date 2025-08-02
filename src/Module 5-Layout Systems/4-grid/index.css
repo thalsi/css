@@ -1,3 +1,22 @@
+.grid-container {
+  border: 3px solid blueviolet;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  gap: 10px;
+}
+
+.item1 {
+  border: 1px solid blueviolet;
+  grid-column-start: -3;
+  background: lightblue;
+}
+
+.item2 {
+  border: 1px solid blueviolet;
+  grid-column-end: 3;
+  background: lightgreen;
+}
+
 .dashboard {
   border: 1px solid blueviolet;
   display: grid;
