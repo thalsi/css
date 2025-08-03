@@ -38,13 +38,13 @@
 ---
 
 ### 📏 Module 5: Layout Systems
-- [ ] Display: `block`, `inline`, `inline-block`, `none`
-- [ ] Float and Clear
-- [ ] Positioning: `static`, `relative`, `absolute`, `fixed`, `sticky`
-- [ ] Z-Index and Stacking Context
-- [ ] Flexbox (Full)
-- [ ] Grid Layout (Full)
-- [ ] Multi-Column Layout
+- [x] Display: `block`, `inline`, `inline-block`, `none`
+- [x] Float and Clear
+- [x] Positioning: `static`, `relative`, `absolute`, `fixed`, `sticky`
+- [x] Z-Index and Stacking Context
+- [x] Flexbox (Full)
+- [x] Grid Layout (Full)
+- [x] Multi-Column Layout
 
 ---
 
