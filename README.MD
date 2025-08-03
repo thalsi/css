@@ -49,19 +49,19 @@
 ---
 
 ### 🧱 Module 6: Spacing and Sizing
-- [ ] Margin & Padding (All directions)
-- [ ] Width, Height, Max/Min
-- [ ] `aspect-ratio`
-- [ ] Centering (Horizontally/Vertically)
+- [x] Margin & Padding (All directions)
+- [x] Width, Height, Max/Min
+- [x] `aspect-ratio`
+- [x] Centering (Horizontally/Vertically)
 
 ---
 
 ### ✨ Module 7: Styling Text and Fonts
-- [ ] Font Family, Size, Weight, Style
-- [ ] Text Transform, Align, Decoration, Spacing
-- [ ] Line Height, Letter Spacing
-- [ ] Google Fonts
-- [ ] Web-safe Fonts
+- [x] Font Family, Size, Weight, Style
+- [x] Text Transform, Align, Decoration, Spacing
+- [x] Line Height, Letter Spacing
+- [x] Google Fonts
+- [x] Web-safe Fonts
 
 ---
 
