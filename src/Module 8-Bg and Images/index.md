@@ -30,12 +30,34 @@
 
 ---
 
+## 🧪 Bonus: Direction Syntax for `linear-gradient`
+
+| Direction Value | Meaning                 | Example                                   |
+| --------------- | ----------------------- | ----------------------------------------- |
+| `to right`      | Left → Right            | `linear-gradient(to right, red, blue)`    |
+| `to top left`   | Bottom Right → Top Left | `linear-gradient(to top left, red, blue)` |
+| `45deg`         | Clockwise from top      | `linear-gradient(45deg, red, blue)`       |
+
+---
+
 ## ✅ 4. `object-fit` and `object-position`
 
 | Property          | Values                                                | Description                                                | Example                        |
 | ----------------- | ----------------------------------------------------- | ---------------------------------------------------------- | ------------------------------ |
 | `object-fit`      | `fill`, `contain`, `cover`, `none`, `scale-down`      | Defines how replaced elements (like `<img>`) fit container | `object-fit: cover;`           |
 | `object-position` | `top`, `center`, `bottom`, `left`, `right`, `50% 50%` | Aligns image inside container                              | `object-position: center top;` |
+
+---
+
+## 📌 object-fit: Visual Behaviors
+
+| Value        | Description                                                                        | Stretch / Crop?                   |
+| ------------ | ---------------------------------------------------------------------------------- | --------------------------------- |
+| `fill`       | Fills the container entirely, **ignoring aspect ratio** (image may look stretched) | ✅ Stretch                        |
+| `contain`    | Fits the image inside the box **without cropping**, maintaining aspect ratio       | ❌ No crop, may leave empty space |
+| `cover`      | Fills the box while maintaining aspect ratio — may **crop** the image              | ✅ Crop edges                     |
+| `none`       | Keeps image's original size — **no resize or crop**                                | ❌ No crop, no resize             |
+| `scale-down` | Uses the smaller of `none` or `contain` — **shrinks if needed** but doesn't grow   | ❌ Only shrink                    |
 
 ---
 
