@@ -1,0 +1,24 @@
+.item1 {
+  height: 100vh;
+}
+.item2 {
+  height: 100vh;
+}
+
+div {
+  border: 3px solid red;
+  width: 600px;
+  height: 600px;
+  background-image: url(/assets/leef.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.scroll-box {
+  background-image: url('/assets/leef.jpg');
+  background-attachment: local;
+  overflow: auto;
+  height: 200px;
+}
