@@ -66,10 +66,10 @@
 ---
 
 ### 🖼️ Module 8: Backgrounds and Images
-- [ ] Background Color
-- [ ] Background Image, Repeat, Size, Position, Attachment
-- [ ] Gradient Backgrounds
-- [ ] `object-fit`, `object-position`
+- [x] Background Color
+- [x] Background Image, Repeat, Size, Position, Attachment
+- [x] Gradient Backgrounds
+- [x] `object-fit`, `object-position`
 
 ---
 
@@ -82,8 +82,8 @@
 ---
 
 ### 🎭 Module 10: Pseudo-Classes & Pseudo-Elements
-- [ ] Pseudo-Classes: `:hover`, `:focus`, `:active`, `:nth-child`, etc.
-- [ ] Pseudo-Elements: `::before`, `::after`, `::first-letter`, `::selection`, `::marker`
+- [x] Pseudo-Classes: `:hover`, `:focus`, `:active`, `:nth-child`, etc.
+- [x] Pseudo-Elements: `::before`, `::after`, `::first-letter`, `::selection`, `::marker`
 
 ---
 
