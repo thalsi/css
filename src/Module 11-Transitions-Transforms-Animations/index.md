@@ -6,23 +6,13 @@
 
 Transitions allow CSS properties to change smoothly over a duration instead of instantly.
 
-| Property                     | Description                            | Example Value                   |
-| ---------------------------- | -------------------------------------- | ------------------------------- |
-| `transition-property`        | Which property to animate              | `width`, `opacity`, `all`       |
-| `transition-duration`        | How long the transition runs           | `0.5s`, `300ms`                 |
-| `transition-timing-function` | Easing (speed curve) of the transition | `ease`, `linear`, `ease-in-out` |
-| `transition-delay`           | Delay before the transition starts     | `0.3s`                          |
-| `transition` (shorthand)     | Combines all four of the above         | `width 0.5s ease 0.2s`          |
-
-| Function                        | What it does                   | Example                 |
-| ------------------------------- | ------------------------------ | ----------------------- |
-| `translate(x, y)`               | Move horizontally/vertically   | `translate(50px, 20px)` |
-| `translateX()` / `translateY()` | Move on one axis               | `translateY(40px)`      |
-| `scale(x, y)`                   | Resize                         | `scale(1.5, 1.5)`       |
-| `scaleX()` / `scaleY()`         | Stretch in one direction       | `scaleX(2)`             |
-| `rotate(angle)`                 | Rotate clockwise               | `rotate(45deg)`         |
-| `skew(x-angle, y-angle)`        | Slant/tilt                     | `skew(20deg, 10deg)`    |
-| `matrix()`                      | Combine multiple 2D transforms | Advanced usage          |
+| Property                     | Description                                                                                                                 | Example Value                   |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| `transition-property`        | Which property to animate                                                                                                   | `width`, `opacity`, `all`       |
+| `transition-duration`        | How long the transition runs                                                                                                | `0.5s`, `300ms`                 |
+| `transition-timing-function` | Easing (speed curve) of the transition                                                                                      | `ease`, `linear`, `ease-in-out` |
+| `transition-delay`           | Delay before the transition starts                                                                                          | `0.3s`                          |
+| `transition` (shorthand)     | Combines all four of the above,transition: property duration timing-function delay,property duration timing-function delay; | `width 0.5s ease 0.2s`          |
 
 ---
 
@@ -32,15 +22,15 @@ Transforms visually manipulate an element in 2D or 3D space (move, rotate, scale
 
 ### 🔧 2D Transform Functions
 
-| Function                        | What it does                   | Example                 |
-| ------------------------------- | ------------------------------ | ----------------------- |
-| `translate(x, y)`               | Move horizontally/vertically   | `translate(50px, 20px)` |
-| `translateX()` / `translateY()` | Move on one axis               | `translateY(40px)`      |
-| `scale(x, y)`                   | Resize                         | `scale(1.5, 1.5)`       |
-| `scaleX()` / `scaleY()`         | Stretch in one direction       | `scaleX(2)`             |
-| `rotate(angle)`                 | Rotate clockwise               | `rotate(45deg)`         |
-| `skew(x-angle, y-angle)`        | Slant/tilt                     | `skew(20deg, 10deg)`    |
-| `matrix()`                      | Combine multiple 2D transforms | Advanced usage          |
+| Function                        | What it does                    | Example                                                                                  |
+| ------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------- |
+| `translate(x, y)`               | Move horizontally/vertically    | `translate(50px, 20px)`                                                                  |
+| `translateX()` / `translateY()` | Move on one axis                | `translateY(40px)`                                                                       |
+| `scale(x, y)`                   | Resize (1 defult)               | `scale(1.5, 1.5)`                                                                        |
+| `scaleX()` / `scaleY()`         | Stretch in one direction        | `scaleX(2)`                                                                              |
+| `rotate(angle)`                 | Rotate clockwise (deg,rad,turn) | `rotate(45deg)` deg → degrees, rad → radians, turn → full circle = 1turn                 |
+| `skew(x-angle, y-angle)`        | Slant/tilt                      | `skew(20deg, 10deg)`                                                                     |
+| `matrix()`                      | Combine multiple 2D transforms  | Advanced usage :matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) |
 
 ---
 
