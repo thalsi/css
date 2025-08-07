@@ -1,54 +1,57 @@
-hr {
-  margin-top: 300px;
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+    perspective: 800px; 
 }
-
-/* translate */
-
-.box-1 {
-  border: 3px solid black;
-  width: 50px;
-  height: 50px;
-  background-color: rgb(0, 169, 248);
-  transition-property: all;
-  transition-duration: 3s;
-}
-
-.hover:hover {
-  transform: matrix(2, 10deg, 25deg, 1, 50px, 50px);
-}
-
-/* transition */
 
 .box {
-  border: 3px solid red;
-  width: 50px;
-  height: 50px;
-  background-color: blueviolet;
+  width: 200px;
+  height: 200px;
+  background: rgb(255, 5, 172);
+  border: 3px solid black;
 
-  transition-property: width, height;
-  transition-duration: 5s, 5s;
-  transition-delay: 0s, 5s;
-}
-
-/* Different timing functions */
-.ease {
-  transition-timing-function: ease;
-}
-.linear {
-  transition-timing-function: linear;
-}
-.ease-in {
-  transition-timing-function: ease-in;
-}
-.ease-out {
-  transition-timing-function: ease-out;
-}
-.ease-in-out {
-  transition-timing-function: ease-in-out;
+  transition-duration:1s;
+ 
 }
 
 .box:hover {
-  width: 100%;
-  height: 150px;
-  background-color: rgb(251, 0, 180);
+
+  background-color: blueviolet;
+    transform: scale3d(1, 1, 2);
+    
+
+} */
+
+.card-container {
+  perspective: 800px;
+}
+
+.cards {
+  position: relative;
+  border: 1px solid black;
+  transform-style: preserve-3d;
+
+  transition: transform 0.8s;
+  width: 200px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  border: 3px solid greenyellow;
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  backface-visibility: hidden;
+}
+
+.card-container:hover .cards {
+  transform: rotateY(180deg);
+}
+
+.back-card {
+  background-color: cadetblue;
+  transform: rotateY(180deg);
 }
