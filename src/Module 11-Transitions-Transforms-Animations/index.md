@@ -232,3 +232,154 @@ transition: background-color 2s linear 1s;
 transition: width 1s ease, height 2s ease-in 0.5s;
 
 ```
+
+# 🎨 CSS Animation Properties – Full Guide
+
+CSS animations let you create smooth, multi-step style changes over time.  
+They are defined with `@keyframes` and applied using animation properties.
+
+---
+
+## 1. `@keyframes`
+
+Defines the animation steps at various points in time.
+
+```css
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } /* Start transparent */
+  to {
+    opacity: 1;
+  } /* End fully visible */
+}
+```
+
+## 2. animation-name
+
+Links the element to the @keyframes.
+
+```
+.box {
+  animation-name: fadeIn; /* Uses the @keyframes fadeIn */
+}
+
+```
+
+## 3. animation-duration
+
+Specifies how long one animation cycle lasts.
+
+```
+.box {
+  animation-name: fadeIn;
+  animation-duration: 2s; /* 2 seconds per cycle */
+}
+```
+
+## 4. animation-timing-function
+
+Defines the speed curve of the animation.
+
+Common values:
+
+- linear → constant speed
+- ease → starts slow, speeds up, ends slow (default)
+- ease-in → starts slow
+- ease-out → ends slow
+- ease-in-out → slow → fast → slow
+- cubic-bezier(x1, y1, x2, y2) → custom curve
+
+```
+.box {
+  animation: fadeIn 2s ease-in;
+}
+
+```
+
+## 5. animation-delay
+
+Adds a wait time before the animation starts.
+
+```
+.box {
+  animation: fadeIn 2s ease-in 1s; /* Starts after 1 second */
+}
+
+```
+
+## 6. animation-iteration-count
+
+Number of times the animation repeats.
+
+Values:
+
+- Number (1, 2, 5)
+- infinite → loops forever
+
+```
+.box {
+  animation: fadeIn 2s linear infinite;
+}
+
+```
+
+## 7. animation-direction
+
+Controls the playback direction.
+
+Values:
+
+- normal → plays forward (default)
+- reverse → plays backward
+- alternate → forward then backward
+- alternate-reverse → backward then forward
+
+```
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(100px); }
+}
+
+.box {
+  animation: slide 2s linear infinite alternate;
+}
+
+```
+
+## 8. animation-fill-mode
+
+Defines what styles apply before/after the animation.
+
+Values:
+
+- none → no styles retained (default)
+- forwards → keeps final keyframe styles
+- backwards → applies first keyframe styles during delay
+- both → applies both forwards and backwards
+
+```
+.box {
+  animation: fadeIn 2s ease forwards;
+}
+
+```
+
+9. animation (shorthand)
+   Combines all animation properties into one line.
+
+Order:
+
+```
+animation: name duration timing-function delay iteration-count direction fill-mode;
+
+```
+
+Example:
+
+```
+.box {
+  animation: fadeIn 2s ease-in 1s infinite alternate forwards;
+}
+
+```

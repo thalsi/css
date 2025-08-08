@@ -1,57 +1,25 @@
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 40px;
-    perspective: 800px; 
-}
-
 .box {
-  width: 200px;
-  height: 200px;
-  background: rgb(255, 5, 172);
+  width: 50px;
+  height: 50px;
   border: 3px solid black;
-
-  transition-duration:1s;
- 
 }
 
 .box:hover {
-
-  background-color: blueviolet;
-    transform: scale3d(1, 1, 2);
-    
-
-} */
-
-.card-container {
-  perspective: 800px;
+  animation-name: moveDown;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: 3;
+  animation-direction: normal;
+  animation-fill-mode: both;
 }
 
-.cards {
-  position: relative;
-  border: 1px solid black;
-  transform-style: preserve-3d;
-
-  transition: transform 0.8s;
-  width: 200px;
-  height: 200px;
-}
-
-.card {
-  position: absolute;
-  border: 3px solid greenyellow;
-  width: 100px;
-  height: 100px;
-  background-color: blueviolet;
-  backface-visibility: hidden;
-}
-
-.card-container:hover .cards {
-  transform: rotateY(180deg);
-}
-
-.back-card {
-  background-color: cadetblue;
-  transform: rotateY(180deg);
+@keyframes moveDown {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 200px;
+    background-color: aqua;
+  }
 }
