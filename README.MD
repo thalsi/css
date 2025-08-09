@@ -88,18 +88,18 @@
 ---
 
 ### 🕹️ Module 11: Transitions, Transforms, Animations
-- [ ] Transitions (`transition`, timing functions)
-- [ ] 2D & 3D Transforms: `translate`, `rotate`, `scale`, `skew`
-- [ ] Animations: `@keyframes`, `animation-name`, `animation-duration`, etc.
+- [x] Transitions (`transition`, timing functions)
+- [x] 2D & 3D Transforms: `translate`, `rotate`, `scale`, `skew`
+- [x] Animations: `@keyframes`, `animation-name`, `animation-duration`, etc.
 
 ---
 
 ### 🧪 Module 12: Responsive Design & Media Queries
-- [ ] Responsive Principles (Mobile-First)
-- [ ] Viewport Meta Tag
-- [ ] Media Queries (min-width, max-width, orientation, etc.)
-- [ ] Breakpoints Strategy
-- [ ] Container Queries (New!)
+- [x] Responsive Principles (Mobile-First)
+- [x] Viewport Meta Tag
+- [x] Media Queries (min-width, max-width, orientation, etc.)
+- [x] Breakpoints Strategy
+- [x] Container Queries (New!)
 
 ---
 
