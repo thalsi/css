@@ -104,11 +104,11 @@
 ---
 
 ### 🧰 Module 13: Tools & Best Practices
-- [ ] CSS Variables (`--custom-props`)
-- [ ] Shorthand vs Longhand
-- [ ] Linting (Stylelint)
-- [ ] Naming Conventions (BEM)
-- [ ] Preprocessors Overview (SCSS)
+- [x] CSS Variables (`--custom-props`)
+- [x] Shorthand vs Longhand
+- [x] Linting (Stylelint)
+- [x] Naming Conventions (BEM)
+- [x] Preprocessors Overview (SCSS)
 
 ---
 
