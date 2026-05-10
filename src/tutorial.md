@@ -1,4 +1,4 @@
-# 📦 Core Fundamentals
+# 📦 Module 1: Core Fundamentals
 
 ## 1. What is CSS, syntax, rules?
 
@@ -954,3 +954,332 @@ These properties are applied to **individual flex items** inside a flex containe
 - Align a single item differently than the rest.
 
 ---
+
+## 📘 Module 6: CSS Specificity & Cascade
+
+Very important for real-world CSS debugging.
+
+| Topic                   | Description                           |
+| ----------------------- | ------------------------------------- |
+| Cascade                 | How CSS rules override each other     |
+| Specificity             | Priority of selectors                 |
+| Inheritance             | Some properties inherit automatically |
+| `!important`            | Highest priority override             |
+| Source Order            | Later rules override earlier ones     |
+| Specificity Calculation | ID > Class > Element                  |
+
+## 📘 Module 7: CSS Display System
+
+You mentioned normal flow, but display itself needs deep coverage.
+
+| Value          | Description                          |
+| -------------- | ------------------------------------ |
+| `block`        | Full-width element                   |
+| `inline`       | Inline content                       |
+| `inline-block` | Inline + size control                |
+| `none`         | Hidden element                       |
+| `contents`     | Removes wrapper box                  |
+| `flow-root`    | Creates new block formatting context |
+
+Also include:
+
+Formatting Contexts
+BFC (Block Formatting Context)
+IFC (Inline Formatting Context)
+
+## 📘 Module 8: CSS Sizing
+
+Very important modern topic.
+| Property | Description |
+| ----------------- | -------------- |
+| `min-width` | Minimum width |
+| `max-width` | Maximum width |
+| `min-height` | Minimum height |
+| `max-height` | Maximum height |
+| `aspect-ratio` | Maintain ratio |
+| `object-fit` | Image fitting |
+| `object-position` | Position media |
+
+## 📘 Module 9: CSS Typography
+
+You only touched font-size indirectly.
+
+Need full typography section.
+
+| Topic             |
+| ----------------- |
+| `font-family`     |
+| `font-size`       |
+| `font-weight`     |
+| `font-style`      |
+| `line-height`     |
+| `letter-spacing`  |
+| `word-spacing`    |
+| `text-align`      |
+| `text-transform`  |
+| `text-decoration` |
+| `text-shadow`     |
+| `white-space`     |
+| `overflow-wrap`   |
+| `word-break`      |
+| `writing-mode`    |
+| `@font-face`      |
+| Web fonts         |
+
+## 📘 Module 10: Backgrounds & Borders
+
+Missing almost completely.
+
+| Topic                   |
+| ----------------------- |
+| `background-color`      |
+| `background-image`      |
+| `background-size`       |
+| `background-position`   |
+| `background-repeat`     |
+| `background-attachment` |
+| Gradients               |
+| Multiple backgrounds    |
+| `border-radius`         |
+| `border-image`          |
+
+## 📘 Module 11: CSS Colors Deep Dive
+
+You mentioned units but not full color systems.
+
+| Topic                  |
+| ---------------------- |
+| Named colors           |
+| HEX                    |
+| RGB                    |
+| RGBA                   |
+| HSL                    |
+| HSLA                   |
+| `currentColor`         |
+| Opacity                |
+| Modern color functions |
+| `color-mix()`          |
+
+## 📘 Module 12: Shadows & Effects
+
+| Property          |
+| ----------------- |
+| `box-shadow`      |
+| `text-shadow`     |
+| `filter`          |
+| `backdrop-filter` |
+| `opacity`         |
+| `mix-blend-mode`  |
+
+## 📘 Module 13: CSS Transitions
+
+Critical modern topic.
+| Topic |
+| ---------------------------- |
+| `transition-property` |
+| `transition-duration` |
+| `transition-delay` |
+| `transition-timing-function` |
+| easing functions |
+
+## 📘 Module 14: CSS Transforms
+
+| Transform          |
+| ------------------ |
+| `translate()`      |
+| `scale()`          |
+| `rotate()`         |
+| `skew()`           |
+| `transform-origin` |
+| 3D transforms      |
+
+## 📘 Module 15: CSS Animations
+
+Very important professional topic.
+
+| Topic                       |
+| --------------------------- |
+| `@keyframes`                |
+| `animation-name`            |
+| `animation-duration`        |
+| `animation-delay`           |
+| `animation-iteration-count` |
+| `animation-direction`       |
+| `animation-fill-mode`       |
+| `animation-play-state`      |
+
+## 📘 Module 16: CSS Grid (FULL)
+
+You only listed Grid in layout systems.
+
+You need a complete dedicated Grid module.
+| Topic |
+| ----------------------- |
+| Grid container |
+| Grid items |
+| `grid-template-columns` |
+| `grid-template-rows` |
+| `grid-template-areas` |
+| `repeat()` |
+| `minmax()` |
+| `fr` unit |
+| implicit/explicit grid |
+| auto-fit / auto-fill |
+| alignment |
+| grid shorthand |
+
+## 📘 Module 17: Responsive Design
+
+Very important.
+
+| Topic                 |
+| --------------------- |
+| Media queries         |
+| Breakpoints           |
+| Mobile-first          |
+| Container queries     |
+| Responsive typography |
+| Responsive images     |
+
+## 📘 Module 18: CSS Variables (Custom Properties)
+
+Modern CSS essential.
+
+| Topic           |
+| --------------- |
+| Variable scope  |
+| fallback values |
+| dynamic theming |
+| dark mode       |
+
+📘 Module 19: Modern CSS Functions
+
+| Function  |
+| --------- |
+| `var()`   |
+| `calc()`  |
+| `min()`   |
+| `max()`   |
+| `clamp()` |
+| `attr()`  |
+
+## 📘 Module 20: Advanced Selectors
+
+You already covered many.
+
+But still missing:
+
+| Selector        |
+| --------------- |
+| `:target`       |
+| `:visited`      |
+| `:link`         |
+| `:any-link`     |
+| `:defined`      |
+| `:fullscreen`   |
+| `:popover-open` |
+| `:autofill`     |
+
+## 📘 Module 21: CSS Architecture
+
+Professional-level topic.
+
+| Methodology       |
+| ----------------- |
+| BEM               |
+| OOCSS             |
+| SMACSS            |
+| ITCSS             |
+| Utility-first CSS |
+
+## 📘 Module 22: CSS Methodologies & Scalability
+
+| Topic              |
+| ------------------ |
+| Design systems     |
+| Tokens             |
+| Component styling  |
+| Reusable utilities |
+| Atomic CSS         |
+
+## 📘 Module 23: Accessibility (A11Y)
+
+Very important professional skill.
+
+| Topic                         |
+| ----------------------------- |
+| Focus states                  |
+| Reduced motion                |
+| Contrast                      |
+| Keyboard navigation           |
+| Accessible hover/focus        |
+| Screen reader friendly hiding |
+
+## 📘 Module 24: CSS Performance Optimization
+
+Advanced topic.
+
+| Topic                  |
+| ---------------------- |
+| Repaint                |
+| Reflow                 |
+| GPU acceleration       |
+| Efficient selectors    |
+| Avoid layout thrashing |
+| Critical CSS           |
+
+## 📘 Module 25: Modern CSS Features
+
+| Topic                |
+| -------------------- |
+| Container Queries    |
+| Nesting              |
+| Cascade Layers       |
+| Subgrid              |
+| Scroll Snap          |
+| Anchor Positioning   |
+| View Transitions API |
+
+## 📘 Module 26: Pseudo-elements Missing
+
+| Selector                 |
+| ------------------------ |
+| `::file-selector-button` |
+| `::part()`               |
+| `::slotted()`            |
+| `::target-text`          |
+| `::spelling-error`       |
+| `::grammar-error`        |
+
+## 📘 Module 27: Tables Styling
+
+| Topic             |
+| ----------------- |
+| `border-collapse` |
+| `border-spacing`  |
+| `caption-side`    |
+| `table-layout`    |
+| zebra striping    |
+
+## 📘 Module 28: Lists Styling
+
+| Topic                 |
+| --------------------- |
+| `list-style-type`     |
+| `list-style-position` |
+| `list-style-image`    |
+
+## 📘 Module 29: Printing Styles
+
+@media print {
+}
+
+## 📘 Module 30: CSS Debugging Tools
+
+| Topic               |
+| ------------------- |
+| DevTools            |
+| Inspect element     |
+| Box model inspector |
+| Flex/Grid overlays  |
+| Computed styles     |
