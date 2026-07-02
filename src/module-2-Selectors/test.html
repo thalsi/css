@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <h1>CSS Selector Examples</h1>
+
+        <!-- Element Selector -->
+        <h3>Element Selector Example</h3>
+
+        <!-- Class Selector -->
+        <p class="highlight">
+            This paragraph uses the class selector.
+        </p>
+
+        <!-- Descendant -->
+        <div class="box descendant">
+
+            <h2>A B (Descendant)</h2>
+
+            <p>Paragraph 1 ✅</p>
+
+            <section>
+                <p>Paragraph 2 ✅</p>
+
+                <div>
+                    <p>Paragraph 3 ✅</p>
+                    
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Direct Child -->
+        <div class="box child">
+
+            <h2>A > B (Direct Child)</h2>
+
+            <p>Paragraph 1 ✅</p>
+
+            <section>
+                <p>Paragraph 2 ❌</p>
+            </section>
+
+            <p>Paragraph 3 ✅</p>
+             <div>inside Content
+                <p>Paragraph 4 ❌</p>
+            </div>
+
+        </div>
+
+        <!-- Adjacent -->
+        <div class="box adjacent">
+
+            <h2>A + B (Adjacent Sibling)</h2>
+
+            <h4>Heading</h4>
+
+            <p>Paragraph 1 ✅</p>
+
+            <p>Paragraph 2 ❌</p>
+
+            <div>Some Content</div>
+
+            <p>Paragraph 3 ❌</p>
+            <div>inside Content
+                <p>Paragraph 4 ❌</p>
+            </div>
+
+
+        </div>
+
+        <!-- General -->
+        <div class="box general">
+
+            <h2>A ~ B (General Sibling)</h2>
+
+            <h5>Heading</h5>
+
+            <p>Paragraph 1 ✅</p>
+
+            <div>Content</div>
+
+            <p>Paragraph 2 ✅</p>
+
+            <section>Section</section>
+
+            <p>Paragraph 3 ✅</p>
+
+             <div>inside Content
+                <p>Paragraph 4 ❌</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

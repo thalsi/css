@@ -1,0 +1,72 @@
+
+/* =====================================
+   1. Universal Selector (*)
+   Selects every element
+===================================== */
+*{
+    font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   2. Element Selector
+   Selects all <h3>
+===================================== */
+h3{
+    color: blue;
+}
+
+/* =====================================
+   3. Class Selector
+   Selects elements with class="highlight"
+===================================== */
+.highlight{
+    background: yellow;
+}
+
+/* =====================================
+   4. ID Selector
+   Selects element with id="main"
+===================================== */
+#main{
+    border:2px solid black;
+    padding:20px;
+}
+
+/* =====================================
+   5. Descendant Selector (A B)
+   Selects every <p> inside .descendant
+===================================== */
+.descendant p{
+    color:red;
+}
+
+/* =====================================
+   6. Direct Child Selector (A > B)
+   Selects only direct child <p>
+===================================== */
+.child > p{
+    color:green;
+}
+
+/* =====================================
+   7. Adjacent Sibling (A + B)
+   Selects first <p> after <h4>
+===================================== */
+.adjacent h4 + p{
+    color:purple;
+    font-weight:bold;
+}
+
+/* =====================================
+   8. General Sibling (A ~ B)
+   Selects all <p> after <h5>
+===================================== */
+.general h5 ~ p{
+    color:orange;
+}
+
+.box{
+    border:1px solid #ccc;
+    padding:15px;
+    margin:20px 0;
+}
