@@ -62,3 +62,37 @@ p{
 .general-sibling-selector ~ p{
  color: green;
 }
+
+
+
+/* =============== 2. Attribute Selectors ===================== */
+
+
+
+input[required] {
+    border: 2px solid red;
+}
+
+input[type="text"]{
+    background-color: blue;
+}
+
+a[href^="https"] {
+    color: green;
+}
+
+a[href$=".in"] {
+    color: rgb(240, 255, 25);
+}
+
+div[class*="error"] {
+    color: red;
+}
+
+[title~="sale"] {
+    color: red;
+}
+
+p[lang|="en"] {
+    font-style: italic;
+}
