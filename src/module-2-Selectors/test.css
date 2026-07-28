@@ -96,3 +96,26 @@ div[class*="error"] {
 p[lang|="en"] {
     font-style: italic;
 }
+
+
+/* ================ 3. structural-pseudo-class ======================== */
+
+.structural-pseudo-class li:first-child{
+    color: rgb(255, 0, 0);
+}
+
+.structural-pseudo-class li:last-child{
+    color: red;
+}
+
+.structural-pseudo-class li:nth-child(3){
+    color: antiquewhite;
+}
+
+.structural-pseudo-class li:nth-last-child(3){
+    color: aqua;
+}
+
+.structural-pseudo-class li:only-child{
+    color: blueviolet;
+}

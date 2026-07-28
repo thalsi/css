@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Structural Pseudo-Class Examples</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    h2 {
+      margin-top: 35px;
+    }
+
+    div, p, span, li {
+      padding: 5px;
+      margin: 2px;
+    }
+
+    /* 1. First Child */
+    .first-child li:first-child {
+      background: lightgreen;
+    }
+
+    /* 2. Last Child */
+    .last-child li:last-child {
+      background: lightblue;
+    }
+
+    /* 3. nth-child(3) */
+    .nth-child li:nth-child(3) {
+      background: orange;
+    }
+
+    /* 4. nth-last-child(2) */
+    .nth-last-child li:nth-last-child(2) {
+      background: pink;
+    }
+
+    /* 5. only-child */
+    .only-child p:only-child {
+      background: yellow;
+    }
+
+    /* 6. first-of-type */
+    .first-of-type p:first-of-type {
+      background: lightcoral;
+    }
+
+    /* 7. last-of-type */
+    .last-of-type p:last-of-type {
+      background: lightseagreen;
+      color: white;
+    }
+
+    /* 8. nth-of-type(2) */
+    .nth-of-type p:nth-of-type(2) {
+      background: violet;
+    }
+
+    /* 9. nth-last-of-type(2) */
+    .nth-last-of-type p:nth-last-of-type(2) {
+      background: gold;
+    }
+
+    /* 10. only-of-type */
+    .only-of-type span:only-of-type {
+      background: tomato;
+      color: white;
+    }
+
+    /* 11. empty */
+    .empty div:empty {
+      width: 150px;
+      height: 40px;
+      border: 2px solid red;
+      background: lightyellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Structural Pseudo-Class Examples</h1>
+
+  <!-- first-child -->
+  <h2>1. :first-child</h2>
+  <ul class="first-child">
+    <li>Item 1 ✅</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <!-- last-child -->
+  <h2>2. :last-child</h2>
+  <ul class="last-child">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3 ✅</li>
+  </ul>
+
+  <!-- nth-child -->
+  <h2>3. :nth-child(3)</h2>
+  <ul class="nth-child">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3 ✅</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- nth-last-child -->
+  <h2>4. :nth-last-child(2)</h2>
+  <ul class="nth-last-child">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3 ✅</li>
+    <li>Item 4</li>
+  </ul>
+
+  <!-- only-child -->
+  <h2>5. :only-child</h2>
+  <div class="only-child">
+    <p>I am the only child ✅</p>
+  </div>
+
+  <!-- first-of-type -->
+  <h2>6. :first-of-type</h2>
+  <div class="first-of-type">
+    <h3>Heading</h3>
+    <p>First Paragraph ✅</p>
+    <p>Second Paragraph</p>
+  </div>
+
+  <!-- last-of-type -->
+  <h2>7. :last-of-type</h2>
+  <div class="last-of-type">
+    <p>Paragraph 1</p>
+    <h3>Heading</h3>
+    <p>Paragraph 2 ✅</p>
+  </div>
+
+  <!-- nth-of-type -->
+  <h2>8. :nth-of-type(2)</h2>
+  <div class="nth-of-type">
+    <p>Paragraph 1</p>
+    <h3>Heading</h3>
+    <p>Paragraph 2 ✅</p>
+    <p>Paragraph 3</p>
+  </div>
+
+  <!-- nth-last-of-type -->
+  <h2>9. :nth-last-of-type(2)</h2>
+  <div class="nth-last-of-type">
+    <p>Paragraph 1</p>
+    <p>Paragraph 2 ✅</p>
+    <p>Paragraph 3</p>
+  </div>
+
+  <!-- only-of-type -->
+  <h2>10. :only-of-type</h2>
+  <div class="only-of-type">
+    <h3>Heading</h3>
+    <span>Only Span ✅</span>
+    <p>Paragraph</p>
+  </div>
+
+  <!-- empty -->
+  <h2>11. :empty</h2>
+  <div class="empty">
+    <div></div> <!-- Empty div -->
+  </div>
+
+</body>
+</html>
