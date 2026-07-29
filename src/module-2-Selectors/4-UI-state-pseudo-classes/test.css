@@ -1,0 +1,44 @@
+
+.btn-hover{
+    background-color: antiquewhite;
+}
+
+.btn-hover:hover{
+    background-color: blue;
+}
+
+.input-focus:focus{
+    border: 3px solid red;
+    outline: none;
+}
+
+.box{
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+.box:focus-within{
+    border-color: blueviolet;
+}
+
+.input-focus-visible{
+    border: 1px solid rebeccapurple;
+}
+
+.input-focus-visible:focus-visible{
+    border: 3px solid green;
+    outline: none;
+}
+
+.btn-active{
+    background-color: blueviolet;
+}
+
+.btn-active:active{
+    background-color: red;
+}
+
+input:checked + label {
+    color: green;
+    font-weight: bold;
+}
