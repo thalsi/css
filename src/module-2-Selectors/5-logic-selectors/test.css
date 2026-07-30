@@ -1,0 +1,30 @@
+/* ========== Logic Selectors ===========*/
+
+.logic-selctor-not > li:not(.active){
+    color: rgb(206, 11, 11);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.logic-selctor-not > li{
+    color: blueviolet;
+}
+
+
+
+:where(h1, h2){
+    color: crimson;
+}
+
+:is(h1, h2){
+    color: chartreuse;
+}
+
+h1, h2, h3 {
+    color: aqua;
+}
+
+.card:has(img){
+    border: 3px solid greenyellow;
+}
+
