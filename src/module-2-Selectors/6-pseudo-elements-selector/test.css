@@ -1,0 +1,33 @@
+p::before{
+content: " 👉 ";
+border: 1px solid red;
+}
+p::after{
+content: " 💥 ";
+border: 1px solid red;
+}
+
+.style-only-the-frsit-line::first-line{
+    font-weight: bold;
+}
+
+.style-only-the-frsit-letter::first-letter{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+::selection {
+  background: yellow;
+  color: black;
+}
+
+::placeholder{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 8px;
+    color: blue;
+}
+
+li::marker {
+  color: red;
+  font-size: 22px;
+}
