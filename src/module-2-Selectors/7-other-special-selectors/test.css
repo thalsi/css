@@ -1,0 +1,39 @@
+
+p:lang(en) {
+  color: blue;
+}
+
+p:lang(fr) {
+  color: red;
+}
+
+p:lang(ar) {
+  direction: rtl;
+}
+
+:dir(rtl) {
+  text-align: right;
+  color: green;
+}
+
+:dir(ltr) {
+  text-align: left;
+}
+
+
+
+:root {
+  --primary: blue;
+}
+
+button {
+  background: var(--primary);
+}
+
+.card {
+  color: var(--primary);
+}
+
+.nav {
+  border-color: var(--primary);
+}
