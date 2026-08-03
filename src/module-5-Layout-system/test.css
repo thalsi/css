@@ -104,3 +104,16 @@
 .item3{
     flex-grow:1;
 }
+
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.grid-container div{
+    background:tomato;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
