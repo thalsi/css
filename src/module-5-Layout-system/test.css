@@ -1,0 +1,106 @@
+.left-img{
+    float:left;
+    margin-right:20px;
+    width:150px;
+}
+
+.claer-fix{
+    clear: both;
+}
+
+.flex-box{
+    display: flex;
+    width: 80%;
+    height: 400px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+.container{
+    display: flex;
+
+    /* Main Axis */
+    flex-direction: row;
+
+    /* Wrapping */
+    flex-wrap: wrap;
+
+    /* Shorthand */
+    /* flex-flow: row wrap; */
+
+    /* Horizontal Alignment */
+    /* justify-content: center; */
+
+    /* Vertical Alignment */
+    /* align-items: center; */
+
+    /* Align Multiple Rows */
+    /* align-content: ; */
+
+    /* Gap */
+    gap: 20px;
+
+    /* Or */
+    /* row-gap:20px; */
+    /* column-gap:20px; */
+
+    height:300px;
+    border:2px solid black;
+}
+
+.item{
+    width:80px;
+    height:80px;
+    background:#4CAF50;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.container-2{
+    display:flex;
+    border:2px solid black;
+    height:200px;
+    gap:10px;
+}
+
+.item-a{
+    width:100px;
+    height:100px;
+    background:tomato;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:24px;
+}
+
+.item1{
+    order:2;
+}
+
+.item2{
+    order:1;
+}
+
+.item3{
+    order:3;
+}
+
+.item1{
+    flex-grow:1;
+}
+
+.item2{
+    flex-grow:2;
+}
+
+.item3{
+    flex-grow:1;
+}
